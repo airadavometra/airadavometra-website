@@ -1,22 +1,23 @@
 import React, { FunctionComponent } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { Header } from '../Header/Header';
-import classes from './App.module.scss';
-import HomeIcon from '../../icons/home.svg';
-import { Example } from '../../containers/Example';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { MainPage } from '../../pages/MainPage/MainPage';
+import { Layout } from '../Layout/Layout';
+import { BlogPage } from '../../pages/BlogPage/BlogPage';
 
 export const App: FunctionComponent = () => {
   return (
     <Router>
-      <div className={classes.main}>
-        <HomeIcon />
-        <Header text="Hello" />
+      <Layout>
         <Switch>
-          <Route path="/">
-            <Example />
+          <Route exact path="/">
+            <MainPage />
           </Route>
+          <Route exact path="/blog">
+            <BlogPage />
+          </Route>
+          <Route>404 Page not found</Route>
         </Switch>
-      </div>
+      </Layout>
     </Router>
   );
 };

@@ -1,3 +1,31 @@
+@import url('../../style/theme.scss');
+
 .main {
-  font-size: 48px;
+  padding: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--header-text-font);
+  font-size: 24px;
+}
+.logo {
+  height: 48px;
+}
+.link {
+  color: inherit;
+  text-decoration: inherit;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.menuItem:not(:last-child) {
+  padding-right: 76px;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
 }
