@@ -1,9 +1,12 @@
-.light-theme {
-  --text-color: #333;
-  --back-color: #fcfcfc;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
-.dark-theme {
-  --text-color: #fcfcfc;
-  --back-color: #333;
+:root {
+  --yellow: #f7c003;
+  --black: #333333;
+  --white: #e4e4e4;
+  --text-color: var(--black);
+  --back-color: var(--yellow);
+  --simple-text-font: 'Montserrat', sans-serif;
+  --header-text-font: 'Staatliches', sans-serif;
 }
