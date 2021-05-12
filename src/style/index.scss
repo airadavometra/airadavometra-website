@@ -2,16 +2,32 @@
 
 body {
   margin: 0;
+  box-sizing: border-box;
   font-family: var(--simple-text-font);
   font-size: 24px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-color);
   background: var(--back-color);
+  & * {
+    box-sizing: border-box;
+  }
 }
 
-svg {
-  width: 16px;
-  height: 16px;
-  fill: var(--text-color);
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+p,
+h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
 }

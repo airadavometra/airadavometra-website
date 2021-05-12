@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.map {
+  width: 57vw;
+  height: 84vh;
+  margin-right: 76px;
+}
+.title {
+  margin-bottom: 36px;
+  font-family: var(--header-text-font);
+  font-size: 36px;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contactItem:not(:last-child) {
+  margin-bottom: 36px;
+}
+[class*='ymaps-2'][class*='-ground-pane'] {
+  filter: grayscale(1);
+}
