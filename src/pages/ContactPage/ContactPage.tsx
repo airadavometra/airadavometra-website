@@ -13,7 +13,7 @@ import { ContactLink } from '../../components/ContactLink/ContactLink';
 export const ContactPage: FunctionComponent = () => {
   return (
     <div className={classes.main}>
-      <YMaps>
+      <YMaps key={'en_US'} query={{ lang: 'en_US' }}>
         <Map
           className={classes.map}
           defaultState={{
