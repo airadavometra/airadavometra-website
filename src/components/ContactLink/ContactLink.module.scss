@@ -1,0 +1,18 @@
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: inherit;
+  text-decoration: inherit;
+}
+.linkText {
+  font-family: var(--header-text-font);
+  font-size: 24px;
+}
+.linkLogo {
+  height: 24px;
+  width: 24px;
+  margin-right: 12px;
+  fill: var(--black);
+}

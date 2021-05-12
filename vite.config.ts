@@ -4,10 +4,5 @@ import reactSvgPlugin from 'vite-plugin-react-svg';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    reactRefresh(),
-    reactSvgPlugin({
-      defaultExport: 'component',
-    }),
-  ],
+  plugins: [reactRefresh(), reactSvgPlugin()],
 });

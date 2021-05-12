@@ -1,3 +1,16 @@
 .main {
-  padding: 36px;
+  padding-left: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+}
+.lettersImage {
+  max-width: 800px;
+}
+.myPhoto {
+  max-width: 610px;
 }
