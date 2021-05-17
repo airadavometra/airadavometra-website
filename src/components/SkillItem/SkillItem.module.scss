@@ -1,0 +1,18 @@
+@import url('../../style/theme.scss');
+
+.icon {
+  height: 64px;
+}
+.header {
+  padding-bottom: 24px;
+  font-family: var(--header-text-font);
+  font-size: 36px;
+}
+.iconsContainer {
+  max-width: 20vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 24px;
+}
