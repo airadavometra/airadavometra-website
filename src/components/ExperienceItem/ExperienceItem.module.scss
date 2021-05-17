@@ -1,0 +1,32 @@
+.titleContainer {
+  padding-bottom: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: inherit;
+  text-decoration: inherit;
+}
+.titleContainerItem:not(:last-child) {
+  padding-right: 24px;
+}
+.linkText {
+  font-family: var(--header-text-font);
+  font-size: 24px;
+}
+.expand {
+  height: 36px;
+  width: 36px;
+}
+.title,
+.year {
+  font-family: var(--header-text-font);
+  font-size: 36px;
+}
+.year {
+  opacity: 50%;
+}
+.text {
+  max-width: 55vw;
+  padding-left: 82px;
+}
