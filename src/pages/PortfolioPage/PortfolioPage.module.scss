@@ -1,0 +1,22 @@
+.main {
+  padding-top: 104px;
+  padding-left: 36px;
+  padding-right: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.experienceItem:not(:last-child) {
+  margin-bottom: 36px;
+}
+.download {
+  font-family: var(--header-text-font);
+  font-size: 36px;
+  padding: 14px 20px 14px 20px;
+  outline: 1px solid var(--black);
+}
