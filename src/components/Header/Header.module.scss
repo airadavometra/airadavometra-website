@@ -24,7 +24,5 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-.menuItem:not(:last-child) {
-  padding-right: 76px;
+  gap: 76px;
 }

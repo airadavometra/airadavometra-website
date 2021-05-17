@@ -18,9 +18,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.contactItem:not(:last-child) {
-  margin-bottom: 36px;
+  gap: 36px;
 }
 [class*='ymaps-2'][class*='-ground-pane'] {
   filter: grayscale(1);
