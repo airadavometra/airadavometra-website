@@ -10,7 +10,7 @@ export interface ExperienceItemProps {
 
 export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({ text, title, year }) => {
   return (
-    <div>
+    <>
       <div className={classes.titleContainer}>
         <h2 className={`${classes.year} ${classes.titleContainerItem}`}>{year}</h2>
         <h2 className={`${classes.title} ${classes.titleContainerItem}`}>{title}</h2>
@@ -19,6 +19,6 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({ text, t
         </button>
       </div>
       <p className={classes.text}>{text}</p>
-    </div>
+    </>
   );
 };
