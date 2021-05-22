@@ -1,4 +1,4 @@
-.titleContainer {
+.titleContainerItem {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -12,8 +12,8 @@
   font-size: 24px;
 }
 .expandBtn {
-  height: 36px;
-  width: 36px;
+  height: 32px;
+  width: 32px;
 }
 .collapse {
   transform: rotate(180deg);
