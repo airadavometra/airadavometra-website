@@ -5,6 +5,8 @@ import { Layout } from '../Layout/Layout';
 import { BlogPage } from '../../pages/BlogPage/BlogPage';
 import { ContactPage } from '../../pages/ContactPage/ContactPage';
 import { PortfolioPage } from '../../pages/PortfolioPage/PortfolioPage';
+import { PhotoPage } from '../../pages/PhotoPage/PhotoPage';
+import { VideoPage } from '../../pages/VideoPage/VideoPage';
 
 export const App: FunctionComponent = () => {
   return (
@@ -22,6 +24,12 @@ export const App: FunctionComponent = () => {
           </Route>
           <Route exact path="/portfolio">
             <PortfolioPage />
+          </Route>
+          <Route exact path="/photo">
+            <PhotoPage />
+          </Route>
+          <Route exact path="/video">
+            <VideoPage />
           </Route>
           <Route>404 Page not found</Route>
         </Switch>

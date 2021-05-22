@@ -1,0 +1,11 @@
+.main {
+  padding: 36px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 36px;
+  background-color: var(--white);
+}
+.videoItem {
+  width: calc((100vw - 3 * 36px) / 2);
+  height: calc(((100vw - 3 * 36px) / 2) / 560 * 315);
+}
