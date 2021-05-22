@@ -1,0 +1,11 @@
+@import url('../../../style/theme.scss');
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 36px;
+}
+.horizontalImg {
+  max-width: calc((100vw - 3 * 36px) / 2);
+}
