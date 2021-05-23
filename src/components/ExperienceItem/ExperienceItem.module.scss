@@ -14,6 +14,7 @@
 .expandBtn {
   height: 32px;
   width: 32px;
+  transition: all 0.5s ease-in-out;
 }
 .collapse {
   transform: rotate(180deg);

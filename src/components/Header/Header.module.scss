@@ -26,3 +26,12 @@
   justify-content: center;
   gap: 76px;
 }
+.menuItem {
+  opacity: 50%;
+  &:hover {
+    opacity: 100%;
+  }
+}
+.isSelected {
+  opacity: 100%;
+}

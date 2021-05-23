@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent } from 'react';
 import classes from './GridItemVertical.module.scss';
 
 export interface GridItemVerticalProps {
