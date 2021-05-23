@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from 'react';
-import classes from './HorizontalMiddle.module.scss';
+import classes from './GridItemHorizontal.module.scss';
 
-export interface HorizontalMiddleProps {
+export interface GridItemHorizontalProps {
   horizontalImgPaths: string[];
 }
 
-export const HorizontalMiddle: FunctionComponent<HorizontalMiddleProps> = ({ horizontalImgPaths }) => {
+export const GridItemHorizontal: FunctionComponent<GridItemHorizontalProps> = ({ horizontalImgPaths }) => {
   return (
     <div className={classes.main}>
       {horizontalImgPaths.map((item, index) => (
