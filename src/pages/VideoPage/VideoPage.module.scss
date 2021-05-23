@@ -6,6 +6,6 @@
   background-color: var(--white);
 }
 .videoItem {
-  width: calc((100vw - 3 * 36px) / 2);
-  height: calc(((100vw - 3 * 36px) / 2) / 560 * 315);
+  width: 100%;
+  aspect-ratio: 560 / 315;
 }
