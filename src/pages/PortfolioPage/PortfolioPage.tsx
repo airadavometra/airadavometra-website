@@ -88,7 +88,12 @@ export const PortfolioPage: FunctionComponent = () => {
           />
         </section>
       </div>
-      <a className={classes.githubSection} href="https://github.com/airadavometra">
+      <a
+        className={classes.githubSection}
+        href="https://github.com/airadavometra"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <p className={classes.githubText}>Please feel free to check out my github account</p>
         <img className={classes.githubLogo} src={githubImg} alt="github" />
       </a>

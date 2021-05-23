@@ -1,18 +1,17 @@
 import React, { FunctionComponent } from 'react';
-import { Link } from 'react-router-dom';
 import classes from './ContactLink.module.scss';
 
 export interface ContactLinkProps {
   linkLogoPath: string;
   linkText: string;
-  linkPath: string;
+  link: string;
 }
 
-export const ContactLink: FunctionComponent<ContactLinkProps> = ({ linkLogoPath, linkText, linkPath }) => {
+export const ContactLink: FunctionComponent<ContactLinkProps> = ({ linkLogoPath, linkText, link }) => {
   return (
-    <Link className={classes.link} to={linkPath}>
+    <a className={classes.link} href={link} target="_blank" rel="noopener noreferrer">
       <img className={classes.linkLogo} src={linkLogoPath} />
       <p className={classes.linkText}>{linkText}</p>
-    </Link>
+    </a>
   );
 };
