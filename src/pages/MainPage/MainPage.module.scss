@@ -5,12 +5,14 @@
   justify-content: space-between;
 }
 .description {
+  padding-bottom: 36px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .lettersImage {
-  max-width: 800px;
+  max-width: 100%;
 }
 .myPhoto {
-  max-width: 610px;
+  max-width: calc(100vw - 57vw);
 }
