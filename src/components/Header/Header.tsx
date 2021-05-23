@@ -28,11 +28,11 @@ export const Header: FunctionComponent = () => {
             Video
           </Link>
         </li>
-        <li className={classes.menuItem}>
+        {/* <li className={classes.menuItem}>
           <Link className={classes.link} to="/blog">
             Blog
           </Link>
-        </li>
+        </li> */}
         <li className={classes.menuItem}>
           <Link className={classes.link} to="/contact">
             Contact

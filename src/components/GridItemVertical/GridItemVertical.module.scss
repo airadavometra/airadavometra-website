@@ -1,5 +1,3 @@
-@import url('../../../style/theme.scss');
-
 .main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -13,4 +11,16 @@
 }
 .horizontalImg {
   max-width: calc((100vw - 4 * 36px) / 3);
+}
+.verticalImgLeft {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.verticalImgMiddle {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.verticalImgRight {
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
