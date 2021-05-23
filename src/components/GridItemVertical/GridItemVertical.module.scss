@@ -10,7 +10,10 @@
   grid-row-end: 3;
 }
 .horizontalImg {
+  width: 100%;
+  height: 100%;
   max-width: calc((100vw - 4 * 36px) / 3);
+  object-fit: cover;
 }
 .verticalImgLeft {
   grid-column-start: 1;
