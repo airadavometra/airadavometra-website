@@ -39,22 +39,34 @@ export const ContactPage: FunctionComponent = () => {
         <h2 className={classes.title}>You can reach me here</h2>
         <ul className={classes.contacts}>
           <li className={classes.contactItem}>
-            <ContactLink linkLogoPath={linkedinLogo} linkPath="/" linkText="LinkedIn" />
+            <ContactLink
+              linkLogoPath={linkedinLogo}
+              link="https://www.linkedin.com/in/daria-artemova-a13003188/"
+              linkText="LinkedIn"
+            />
           </li>
           <li className={classes.contactItem}>
-            <ContactLink linkLogoPath={githubLogo} linkPath="/" linkText="GitHub" />
+            <ContactLink linkLogoPath={githubLogo} link="https://github.com/airadavometra" linkText="GitHub" />
           </li>
           <li className={classes.contactItem}>
-            <ContactLink linkLogoPath={emailLogo} linkPath="/" linkText="E-mail" />
+            <ContactLink linkLogoPath={emailLogo} link="mailto:airadavometra@yandex.ru?" linkText="E-mail" />
           </li>
           <li className={classes.contactItem}>
-            <ContactLink linkLogoPath={telegramLogo} linkPath="/" linkText="Telegram" />
+            <ContactLink linkLogoPath={telegramLogo} link="https://t.me/airadavometra" linkText="Telegram" />
           </li>
           <li className={classes.contactItem}>
-            <ContactLink linkLogoPath={instagramLogo} linkPath="/" linkText="Instagram" />
+            <ContactLink
+              linkLogoPath={instagramLogo}
+              link="https://www.instagram.com/airadavometra/"
+              linkText="Instagram"
+            />
           </li>
           <li className={classes.contactItem}>
-            <ContactLink linkLogoPath={youtubeLogo} linkPath="/" linkText="Youtube" />
+            <ContactLink
+              linkLogoPath={youtubeLogo}
+              link="https://www.youtube.com/user/dbelaya15/featured"
+              linkText="Youtube"
+            />
           </li>
         </ul>
       </div>
