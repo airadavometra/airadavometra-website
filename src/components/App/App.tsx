@@ -16,9 +16,9 @@ export const App: FunctionComponent = () => {
           <Route exact path="/">
             <MainPage />
           </Route>
-          <Route exact path="/blog">
+          {/* <Route exact path="/blog">
             <BlogPage />
-          </Route>
+          </Route> */}
           <Route exact path="/contact">
             <ContactPage />
           </Route>
