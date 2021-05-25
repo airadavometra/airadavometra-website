@@ -1,9 +1,9 @@
 .main {
   max-width: 1600px;
   margin: auto;
-  padding-top: 104px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding: 122px 36px;
+}
+.skillsAndExperience {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -40,7 +40,7 @@
 .githubSection {
   width: fit-content;
   margin: auto;
-  padding: 122px 0;
+  padding-top: 122px;
   display: flex;
   flex-direction: row;
   align-items: center;

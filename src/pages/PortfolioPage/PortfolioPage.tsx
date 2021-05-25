@@ -17,8 +17,8 @@ import githubImg from '../../icons/github.svg';
 
 export const PortfolioPage: FunctionComponent = () => {
   return (
-    <>
-      <div className={classes.main}>
+    <div className={classes.main}>
+      <div className={classes.skillsAndExperience}>
         <section>
           <ul className={classes.experienceList}>
             <li className={classes.experienceItem}>
@@ -105,6 +105,6 @@ export const PortfolioPage: FunctionComponent = () => {
         <p className={classes.githubText}>Please feel free to check out my github account</p>
         <img className={classes.githubLogo} src={githubImg} alt="github" />
       </a>
-    </>
+    </div>
   );
 };
