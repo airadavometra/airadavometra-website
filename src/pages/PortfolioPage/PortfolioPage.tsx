@@ -56,7 +56,15 @@ export const PortfolioPage: FunctionComponent = () => {
           </ul>
         </section>
         <section className={classes.skills}>
-          <button className={`${classes.download} ${classes.skillsItem}`}>Download CV</button>
+          <a
+            className={`${classes.download} ${classes.skillsItem}`}
+            href="/resume.pdf"
+            //download="Artemova Daria front-end developer.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download CV
+          </a>
           <SkillItem
             className={classes.skillsItem}
             skillName="Front-end"
