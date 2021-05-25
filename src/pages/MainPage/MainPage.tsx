@@ -7,12 +7,7 @@ export const MainPage: FunctionComponent = () => {
   return (
     <div className={classes.main}>
       <div className={classes.description}>
-        <img
-          onContextMenu={(e) => e.preventDefault()}
-          className={classes.lettersImage}
-          src={lettersImg}
-          alt="letters"
-        />
+        <img className={classes.lettersImage} src={lettersImg} alt="letters" />
         <p>
           <b>Hi. I’m Daria.</b>
           <br /> A holistic software developer
@@ -20,7 +15,7 @@ export const MainPage: FunctionComponent = () => {
           <br /> Sometimes I’m also a traveller.
         </p>
       </div>
-      <img className={classes.myPhoto} src={myPhoto} alt="photo" />
+      <img onContextMenu={(e) => e.preventDefault()} className={classes.myPhoto} src={myPhoto} alt="photo" />
     </div>
   );
 };
