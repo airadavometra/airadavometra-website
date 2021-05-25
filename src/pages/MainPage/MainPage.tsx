@@ -7,7 +7,12 @@ export const MainPage: FunctionComponent = () => {
   return (
     <div className={classes.main}>
       <div className={classes.description}>
-        <img className={classes.lettersImage} src={lettersImg} alt="letters" />
+        <img
+          onContextMenu={(e) => e.preventDefault()}
+          className={classes.lettersImage}
+          src={lettersImg}
+          alt="letters"
+        />
         <p>
           <b>Hi. I’m Daria.</b>
           <br /> A holistic software developer
