@@ -21,9 +21,13 @@ export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
     case VerticalImgPosition.Left: {
       return (
         <div className={classes.main}>
-          <img className={`${classes.verticalImg} ${classes.verticalImgLeft}`} src={verticalImgPath} />
+          <img
+            onContextMenu={(e) => e.preventDefault()}
+            className={`${classes.verticalImg} ${classes.verticalImgLeft}`}
+            src={verticalImgPath}
+          />
           {horizontalImgPaths.map((item, index) => (
-            <img className={classes.horizontalImg} key={index} src={item} />
+            <img onContextMenu={(e) => e.preventDefault()} className={classes.horizontalImg} key={index} src={item} />
           ))}
         </div>
       );
@@ -32,9 +36,13 @@ export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
       return (
         <div className={classes.main}>
           {horizontalImgPaths.map((item, index) => (
-            <img className={classes.horizontalImg} key={index} src={item} />
+            <img onContextMenu={(e) => e.preventDefault()} className={classes.horizontalImg} key={index} src={item} />
           ))}
-          <img className={`${classes.verticalImg} ${classes.verticalImgRight}`} src={verticalImgPath} />
+          <img
+            onContextMenu={(e) => e.preventDefault()}
+            className={`${classes.verticalImg} ${classes.verticalImgRight}`}
+            src={verticalImgPath}
+          />
         </div>
       );
     }
@@ -42,11 +50,11 @@ export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
       return (
         <div className={classes.main}>
           {horizontalImgPaths.slice(0, 3).map((item, index) => (
-            <img className={classes.horizontalImg} key={index} src={item} />
+            <img onContextMenu={(e) => e.preventDefault()} className={classes.horizontalImg} key={index} src={item} />
           ))}
           <img className={`${classes.verticalImg} ${classes.verticalImgMiddle}`} src={verticalImgPath} />
           {horizontalImgPaths.slice(3, 5).map((item, index) => (
-            <img className={classes.horizontalImg} key={index} src={item} />
+            <img onContextMenu={(e) => e.preventDefault()} className={classes.horizontalImg} key={index} src={item} />
           ))}
         </div>
       );

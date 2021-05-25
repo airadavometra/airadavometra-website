@@ -9,7 +9,7 @@ export const GridItemHorizontal: FunctionComponent<GridItemHorizontalProps> = ({
   return (
     <div className={classes.main}>
       {horizontalImgPaths.map((item, index) => (
-        <img className={classes.horizontalImg} key={index} src={item} />
+        <img onContextMenu={(e) => e.preventDefault()} className={classes.horizontalImg} key={index} src={item} />
       ))}
     </div>
   );
