@@ -24,6 +24,23 @@
   font-family: var(--header-text-font);
   font-size: 36px;
 }
+@media (max-width: 1000px) {
+  .linkText {
+    font-size: 18px;
+  }
+  .title,
+  .year {
+    font-size: 24px;
+  }
+  .text {
+    padding-left: 62px;
+    padding-top: 24px;
+  }
+  .expandBtn {
+    height: 24px;
+    width: 24px;
+  }
+}
 .year {
   opacity: 50%;
 }

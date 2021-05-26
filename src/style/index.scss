@@ -13,6 +13,11 @@ body {
     box-sizing: border-box;
   }
 }
+@media (max-width: 1000px) {
+  body {
+    font-size: 18px;
+  }
+}
 ul {
   margin: 0;
   padding: 0;

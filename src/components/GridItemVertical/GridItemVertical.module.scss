@@ -27,3 +27,14 @@
   grid-column-start: 3;
   grid-column-end: 4;
 }
+@media (max-width: 1000px) {
+  .main {
+    grid-gap: 24px;
+  }
+  .verticalImg {
+    max-width: calc((100vw - 4 * 24px) / 3);
+  }
+  .horizontalImg {
+    max-width: calc((100vw - 4 * 24px) / 3);
+  }
+}

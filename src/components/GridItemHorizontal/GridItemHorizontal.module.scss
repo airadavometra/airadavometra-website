@@ -12,3 +12,11 @@
   max-width: calc((100vw - 3 * 36px) / 2);
   object-fit: cover;
 }
+@media (max-width: 1000px) {
+  .main {
+    grid-gap: 24px;
+  }
+  .horizontalImg {
+    max-width: calc((100vw - 3 * 24px) / 2);
+  }
+}
