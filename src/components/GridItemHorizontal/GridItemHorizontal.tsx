@@ -1,15 +1,23 @@
 import React, { FunctionComponent } from 'react';
+import { ImgInfo } from '../../utils/getPhotos';
 import classes from './GridItemHorizontal.module.scss';
 
 export interface GridItemHorizontalProps {
-  horizontalImgPaths: string[];
+  imgPaths: ImgInfo[];
+  onClick(imgId: number): void;
 }
 
-export const GridItemHorizontal: FunctionComponent<GridItemHorizontalProps> = ({ horizontalImgPaths }) => {
+export const GridItemHorizontal: FunctionComponent<GridItemHorizontalProps> = ({ imgPaths, onClick }) => {
   return (
     <div className={classes.main}>
-      {horizontalImgPaths.map((item, index) => (
-        <img onContextMenu={(e) => e.preventDefault()} className={classes.horizontalImg} key={index} src={item} />
+      {imgPaths.map((item) => (
+        <img
+          onContextMenu={(e) => e.preventDefault()}
+          className={classes.horizontalImg}
+          key={item.imgId}
+          src={item.imgPath}
+          onClick={() => onClick(item.imgId)}
+        />
       ))}
     </div>
   );

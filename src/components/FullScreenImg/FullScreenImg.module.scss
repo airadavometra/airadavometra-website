@@ -1,19 +1,31 @@
 .main {
   padding: 0 36px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--black-transparent);
 }
 .button {
   max-height: 36px;
 }
 .photo {
-  width: 80vw;
+  max-height: calc(100vh - 72px - 72px);
+  max-width: calc(100vw - 120px - 120px);
 }
-.buttonsGroup {
-  height: 100vh;
+.closeButton {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+}
+.photoContainer {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
