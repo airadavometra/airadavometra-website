@@ -16,6 +16,11 @@
   font-family: var(--header-text-font);
   font-size: 24px;
 }
+@media (max-width: 1000px) {
+  .linkText {
+    font-size: 18px;
+  }
+}
 .linkLogo {
   height: 24px;
   width: 24px;

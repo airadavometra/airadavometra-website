@@ -16,3 +16,11 @@
 .myPhoto {
   max-width: calc(100vw - 57vw);
 }
+@media (max-width: 1000px) {
+  .main {
+    padding-left: 24px;
+  }
+  .description {
+    padding-bottom: 24px;
+  }
+}

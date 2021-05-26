@@ -2,3 +2,8 @@
   padding: 36px;
   background-color: var(--white);
 }
+@media (max-width: 1000px) {
+  .main {
+    padding: 24px;
+  }
+}

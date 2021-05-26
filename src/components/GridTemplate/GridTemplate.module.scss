@@ -5,3 +5,9 @@
   flex-direction: column;
   gap: 36px;
 }
+
+@media (max-width: 1000px) {
+  .main {
+    gap: 24px;
+  }
+}
