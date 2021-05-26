@@ -13,15 +13,6 @@
   font-size: 24px;
   background-color: var(--yellow);
 }
-@media (max-width: 1000px) {
-  .main {
-    padding: 24px;
-    font-size: 18px;
-  }
-  .logo {
-    height: 36px;
-  }
-}
 .logo {
   height: 48px;
 }
@@ -43,4 +34,61 @@
 }
 .isSelected {
   opacity: 100%;
+}
+.burger {
+  height: 36px;
+  display: none;
+}
+.fullScreenMenu {
+  display: none;
+  padding: 0 36px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: var(--yellow);
+}
+.fullScreenMenuOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fullScreenMenuList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 76px;
+  font-size: 24px;
+}
+.close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+@media (max-width: 1000px) {
+  .main {
+    padding: 24px;
+    font-size: 18px;
+  }
+  .logo {
+    height: 36px;
+  }
+}
+@media (max-width: 400px) {
+  .main {
+    padding: 24px;
+    font-size: 14px;
+  }
+  .logo {
+    height: 36px;
+  }
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
 }

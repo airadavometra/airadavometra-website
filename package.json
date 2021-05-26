@@ -27,6 +27,7 @@
     "react-dom": "^17.0.0",
     "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
+    "react-use": "^17.2.4",
     "react-yandex-maps": "^4.6.0"
   },
   "devDependencies": {

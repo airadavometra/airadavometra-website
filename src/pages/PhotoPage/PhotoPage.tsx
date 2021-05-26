@@ -10,9 +10,11 @@ export const PhotoPage: FunctionComponent = () => {
   const [bigImgId, setBigImgId] = useState(0);
 
   const openPhoto = (imgId: number) => {
-    setBigPhotoOpen(true);
-    setBigImgId(imgId);
-    document.body.classList.add('frozen');
+    if (window.screen.width > 400) {
+      setBigPhotoOpen(true);
+      setBigImgId(imgId);
+      document.body.classList.add('frozen');
+    }
   };
   const closePhoto = () => {
     setBigPhotoOpen(false);
