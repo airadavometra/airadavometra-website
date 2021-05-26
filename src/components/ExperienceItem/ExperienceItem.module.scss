@@ -24,6 +24,18 @@
   font-family: var(--header-text-font);
   font-size: 36px;
 }
+.year {
+  opacity: 50%;
+}
+.text {
+  max-width: 55vw;
+  padding-left: 82px;
+  padding-top: 36px;
+}
+.hiddenText {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .linkText {
     font-size: 18px;
@@ -41,14 +53,16 @@
     width: 24px;
   }
 }
-.year {
-  opacity: 50%;
-}
-.text {
-  max-width: 55vw;
-  padding-left: 82px;
-  padding-top: 36px;
-}
-.hiddenText {
-  display: none;
+
+@media (max-width: 400px) {
+  .titleContainerItem {
+    align-items: flex-start;
+  }
+  .text {
+    max-width: 100%;
+    padding: 24px 0;
+  }
+  .title {
+    text-align: left;
+  }
 }

@@ -14,11 +14,26 @@ import photoshopImg from '../../icons/photoshop.svg';
 import csharpImg from '../../icons/csharp.svg';
 import dotnetImg from '../../icons/dotnet.svg';
 import githubImg from '../../icons/github.svg';
+import { useMedia } from 'react-use';
 
 export const PortfolioPage: FunctionComponent = () => {
+  const isMobile = useMedia('(max-width: 400px)');
+  const downloadButton = (
+    <a
+      className={`${classes.download} ${classes.skillsItem}`}
+      href="/resume.pdf"
+      //download="Artemova Daria front-end developer.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Download CV
+    </a>
+  );
+
   return (
     <div className={classes.main}>
       <div className={classes.skillsAndExperience}>
+        {isMobile && downloadButton}
         <section>
           <ul className={classes.experienceList}>
             <li className={classes.experienceItem}>
@@ -56,15 +71,7 @@ export const PortfolioPage: FunctionComponent = () => {
           </ul>
         </section>
         <section className={classes.skills}>
-          <a
-            className={`${classes.download} ${classes.skillsItem}`}
-            href="/resume.pdf"
-            //download="Artemova Daria front-end developer.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download CV
-          </a>
+          {!isMobile && downloadButton}
           <SkillItem
             className={classes.skillsItem}
             skillName="Front-end"

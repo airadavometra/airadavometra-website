@@ -20,3 +20,13 @@
     max-width: calc((100vw - 3 * 24px) / 2);
   }
 }
+@media (max-width: 400px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .horizontalImg {
+    max-width: 100%;
+  }
+}
