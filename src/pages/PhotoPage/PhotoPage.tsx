@@ -1,36 +1,45 @@
-import React, { FunctionComponent } from 'react';
-import { GridItemHorizontal } from '../../components/GridItemHorizontal/GridItemHorizontal';
-import { GridItemVertical, VerticalImgPosition } from '../../components/GridItemVertical/GridItemVertical';
+import React, { FunctionComponent, useState } from 'react';
 import classes from './PhotoPage.module.scss';
-import verticalPhoto1 from '../../images/photos/DSC08204-01.jpeg';
-import horizontalPhoto11 from '../../images/photos/DSC00561-01.jpeg';
-import horizontalPhoto12 from '../../images/photos/DSC07525-01.jpeg';
-import horizontalPhoto13 from '../../images/photos/DSC08336-01.jpeg';
-import horizontalPhoto14 from '../../images/photos/DSC00689-01.jpeg';
-import horizontalPhoto21 from '../../images/photos/DSC08228-01-01.jpeg';
-import horizontalPhoto22 from '../../images/photos/DSC07910-01.jpeg';
+import { FullScreenImg } from '../../components/FullScreenImg/FullScreenImg';
+import { getPhotos } from '../../utils/getPhotos';
+import { GridTemplate } from '../../components/GridTemplate/GridTemplate';
 
 export const PhotoPage: FunctionComponent = () => {
+  const photos = getPhotos();
+  const [isBigPhotoOpen, setBigPhotoOpen] = useState(false);
+  const [bigImgId, setBigImgId] = useState(0);
+
+  const openPhoto = (imgId: number) => {
+    setBigPhotoOpen(true);
+    setBigImgId(imgId);
+    document.body.classList.add('frozen');
+  };
+  const closePhoto = () => {
+    setBigPhotoOpen(false);
+    setBigImgId(0);
+    document.body.classList.remove('frozen');
+  };
+  const changePhoto = (newImgId: number) => {
+    if (newImgId == photos.length) {
+      newImgId = 0;
+    }
+    if (newImgId === -1) {
+      newImgId = photos.length - 1;
+    }
+    setBigImgId(newImgId);
+  };
+
   return (
-    <div className={classes.main}>
-      <GridItemVertical
-        verticalImgPath={verticalPhoto1}
-        horizontalImgPaths={[horizontalPhoto11, horizontalPhoto12, horizontalPhoto13, horizontalPhoto14]}
-        verticalImgPosition={VerticalImgPosition.Left}
-      />
-      <GridItemHorizontal horizontalImgPaths={[horizontalPhoto21, horizontalPhoto22]} />
-      <GridItemVertical
-        verticalImgPath={verticalPhoto1}
-        horizontalImgPaths={[horizontalPhoto11, horizontalPhoto12, horizontalPhoto13, horizontalPhoto14]}
-        verticalImgPosition={VerticalImgPosition.Middle}
-      />
-      <GridItemHorizontal horizontalImgPaths={[horizontalPhoto21, horizontalPhoto22]} />
-      <GridItemVertical
-        verticalImgPath={verticalPhoto1}
-        horizontalImgPaths={[horizontalPhoto11, horizontalPhoto12, horizontalPhoto13, horizontalPhoto14]}
-        verticalImgPosition={VerticalImgPosition.Right}
-      />
-      <GridItemHorizontal horizontalImgPaths={[horizontalPhoto21, horizontalPhoto22]} />
-    </div>
+    <>
+      <div className={classes.main}>
+        <GridTemplate imgPaths={photos.slice(0, 21)} onClick={openPhoto} />
+      </div>
+      <FullScreenImg
+        img={photos[bigImgId]}
+        show={isBigPhotoOpen}
+        onCloseClick={closePhoto}
+        onMoveClick={changePhoto}
+      ></FullScreenImg>
+    </>
   );
 };
