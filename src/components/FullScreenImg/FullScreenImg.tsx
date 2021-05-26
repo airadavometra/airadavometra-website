@@ -24,7 +24,7 @@ export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({ img, show
         <button className={classes.button}>
           <img src={previousImg} alt="Previous image button" onClick={() => onMoveClick(img.imgId - 1)} />
         </button>
-        <img className={classes.photo} src={img.imgPath} alt="Photo" />
+        <img className={classes.photo} src={img.imgPath} alt="Photo" onContextMenu={(e) => e.preventDefault()} />
         <button className={classes.button}>
           <img src={nextImg} alt="Next image button" onClick={() => onMoveClick(img.imgId + 1)} />
         </button>
