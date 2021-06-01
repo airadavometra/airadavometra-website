@@ -10,26 +10,28 @@ export interface GridTemplateProps {
 }
 
 export const GridTemplate: FunctionComponent<GridTemplateProps> = ({ imgPaths, onClick }) => {
+  const verticalImgs = imgPaths.filter((p) => p.isVertical);
+  const horizontalImgs = imgPaths.filter((p) => !p.isVertical);
   return (
     <div className={classes.main}>
       <GridItemVertical
-        imgPaths={imgPaths.slice(0, 5)}
+        imgPaths={verticalImgs.slice(0, 1).concat(horizontalImgs.slice(0, 4))}
         verticalImgPosition={VerticalImgPosition.Left}
         onClick={onClick}
       />
-      <GridItemHorizontal imgPaths={imgPaths.slice(5, 7)} onClick={onClick} />
+      <GridItemHorizontal imgPaths={horizontalImgs.slice(4, 6)} onClick={onClick} />
       <GridItemVertical
-        imgPaths={imgPaths.slice(7, 12)}
+        imgPaths={verticalImgs.slice(1, 2).concat(horizontalImgs.slice(6, 10))}
         verticalImgPosition={VerticalImgPosition.Middle}
         onClick={onClick}
       />
-      <GridItemHorizontal imgPaths={imgPaths.slice(12, 14)} onClick={onClick} />
+      <GridItemHorizontal imgPaths={horizontalImgs.slice(10, 12)} onClick={onClick} />
       <GridItemVertical
-        imgPaths={imgPaths.slice(14, 19)}
+        imgPaths={verticalImgs.slice(2, 3).concat(horizontalImgs.slice(12, 16))}
         verticalImgPosition={VerticalImgPosition.Right}
         onClick={onClick}
       />
-      <GridItemHorizontal imgPaths={imgPaths.slice(19, 21)} onClick={onClick} />
+      <GridItemHorizontal imgPaths={horizontalImgs.slice(16, 18)} onClick={onClick} />
     </div>
   );
 };
