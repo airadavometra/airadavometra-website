@@ -19,7 +19,8 @@ export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
   verticalImgPosition,
   onClick,
 }) => {
-  const verticalImg = imgPaths.find((p) => p.isVertical) as ImgInfo;
+  const verticalImgPath = imgPaths.find((p) => p.isVertical)?.imgPath;
+  const verticalImgId = imgPaths.find((p) => p.isVertical)?.imgId as number;
   const horizontalImgs = imgPaths.filter((p) => !p.isVertical);
   return (
     <div className={classes.main}>
@@ -30,8 +31,8 @@ export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
           [classes.verticalImgMiddle]: verticalImgPosition === VerticalImgPosition.Middle,
           [classes.verticalImgRight]: verticalImgPosition === VerticalImgPosition.Right,
         })}
-        src={verticalImg.imgPath}
-        onClick={() => onClick(verticalImg.imgId)}
+        src={verticalImgPath}
+        onClick={() => onClick(verticalImgId)}
       />
       {horizontalImgs.map((item) => (
         <img

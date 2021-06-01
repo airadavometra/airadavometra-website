@@ -1,9 +1,13 @@
 .main {
   padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
   background-color: var(--white);
 }
 @media (max-width: 1000px) {
   .main {
     padding: 24px;
+    gap: 24px;
   }
 }
