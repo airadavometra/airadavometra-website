@@ -6,6 +6,8 @@ import { GridTemplate } from '../../components/GridTemplate/GridTemplate';
 
 export const PhotoPage: FunctionComponent = () => {
   const photos = getPhotos(window.innerWidth, 126);
+  const verticalPhotos = photos.filter((item) => item.isVertical);
+  const horizontalPhotos = photos.filter((item) => !item.isVertical);
   const [isBigPhotoOpen, setBigPhotoOpen] = useState(false);
   const [bigImgId, setBigImgId] = useState(0);
 
@@ -36,12 +38,36 @@ export const PhotoPage: FunctionComponent = () => {
   return (
     <>
       <div className={classes.main}>
-        <GridTemplate imgPaths={photos.slice(0, 21)} onClick={openPhoto} />
-        <GridTemplate imgPaths={photos.slice(21, 42)} onClick={openPhoto} />
-        <GridTemplate imgPaths={photos.slice(42, 63)} onClick={openPhoto} />
-        <GridTemplate imgPaths={photos.slice(63, 84)} onClick={openPhoto} />
-        <GridTemplate imgPaths={photos.slice(84, 105)} onClick={openPhoto} />
-        <GridTemplate imgPaths={photos.slice(105, 126)} onClick={openPhoto} />
+        <GridTemplate
+          verticalImgs={verticalPhotos.slice(0, 3)}
+          horizontalImgs={horizontalPhotos.slice(0, 18)}
+          onClick={openPhoto}
+        />
+        <GridTemplate
+          verticalImgs={verticalPhotos.slice(3, 6)}
+          horizontalImgs={horizontalPhotos.slice(18, 36)}
+          onClick={openPhoto}
+        />
+        <GridTemplate
+          verticalImgs={verticalPhotos.slice(6, 9)}
+          horizontalImgs={horizontalPhotos.slice(36, 54)}
+          onClick={openPhoto}
+        />
+        <GridTemplate
+          verticalImgs={verticalPhotos.slice(9, 12)}
+          horizontalImgs={horizontalPhotos.slice(54, 72)}
+          onClick={openPhoto}
+        />
+        <GridTemplate
+          verticalImgs={verticalPhotos.slice(12, 15)}
+          horizontalImgs={horizontalPhotos.slice(72, 90)}
+          onClick={openPhoto}
+        />
+        <GridTemplate
+          verticalImgs={verticalPhotos.slice(15, 18)}
+          horizontalImgs={horizontalPhotos.slice(90, 108)}
+          onClick={openPhoto}
+        />
       </div>
       <FullScreenImg
         img={photos[bigImgId]}
