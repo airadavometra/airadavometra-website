@@ -41,7 +41,7 @@ export const PortfolioPage: FunctionComponent = () => {
                 isOpen={true}
                 year="2021"
                 title="Started doing front-end"
-                text="My teammates and I support not only CRM system but also a poor and ugly front-end part which is made in back-end style. So I started working on its improvement, because I’m really interested in front-end development. For now I made our own React components library and started to use it in new pages code. Even though I’m not an experienced front-end developer, I study a lot and teach my teammates. "
+                text="I realized that I am actually very interested in front-end development, especially in accessibility, usability and design. So I started working with a poor and ugly CRM UI, written on .NET legacy technologies in a back-end style. I made a React components library and a pipeline based on semantic versioning rules to automatically publish it to NPM. I also created a new web app using React, Redux and TypeScript as a first example. After that I conducted a demo to my teammates. I hope I set the direction of web development."
               />
             </li>
             <li className={classes.experienceItem}>
@@ -49,7 +49,7 @@ export const PortfolioPage: FunctionComponent = () => {
                 isOpen={false}
                 year="2019"
                 title="Became a back-end developer"
-                text="I had been working on a CRM system. I did new features and a lot of refactoring, because it was a really old code base... There was a big refactoring project for order documents processes where I had to not only rewrite existing code but also make it work with multiple customers in one request and deal with high load. I also participated in architecturing and some management and I usually mentored and trained interns during their internsip."
+                text="I had been working on a CRM system for about two years. I had been doing new features and a lot of refactoring, because it was a really old and confusing code base... Also there was a big refactoring project for order documents processes, I had to not only rewrite existing code with new process engine but also make it process multiple customers in one request and deal with high load. That was a knotty problem! I also had been participating in architecturing and some mentoring and management."
               />
             </li>
             <li className={classes.experienceItem}>
@@ -57,7 +57,7 @@ export const PortfolioPage: FunctionComponent = () => {
                 isOpen={false}
                 year="2017"
                 title="Became a QA automation engeneer"
-                text="I started my carrier as a QA automation engeneer in CRM system just after my university graduation. I had been studying documentation and the code, creating test cases, writing tests and analysing test runs. I had covered the whole code base with autotests for a year. After that I helped other teams whith autotests and participated in the improvement of autotesting process and tools."
+                text="I started my carrier as a QA automation engeneer in CRM system just after my university graduation. I had been studying documentation and code, creating test cases, writing tests and analysing test runs. I had covered the whole code base with autotests for a year. After that I had been helping to create new team of engineers and participated in the improvement of autotesting process and tools."
               />
             </li>
             <li className={classes.experienceItem}>
@@ -65,7 +65,7 @@ export const PortfolioPage: FunctionComponent = () => {
                 isOpen={false}
                 year="2017"
                 title="Got my bachelor in computer science in RSUH, Moscow"
-                text="I started my carrier as a QA automation engeneer in CRM system just after my university graduation. I had been studying documentation and the code, creating test cases, writing tests and analysing test runs. I had covered the whole code base with autotests for a year. After that I helped other teams whith autotests and participated in the improvement of autotesting process and tools."
+                text="I had been studying a lot of maths and programming, just a little bit of everything. Oh, I wish I could remember all that..."
               />
             </li>
           </ul>
