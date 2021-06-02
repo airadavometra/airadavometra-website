@@ -17,7 +17,7 @@ import githubImg from '../../icons/github.svg';
 import { useMedia } from 'react-use';
 
 export const PortfolioPage: FunctionComponent = () => {
-  const isMobile = useMedia('(max-width: 400px)');
+  const isMobile = useMedia('(max-width: 500px)');
   const downloadButton = (
     <a
       className={`${classes.download} ${classes.skillsItem}`}
