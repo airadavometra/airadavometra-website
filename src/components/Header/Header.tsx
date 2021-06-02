@@ -82,7 +82,7 @@ export const Header: FunctionComponent = () => {
       <img className={classes.logo} src={logoImg} alt="logo" />
       <Menu className={classes.menu} isSelected={isSelected} onClick={setSelectedItem} />
       <button className={classes.burger} onClick={openMenu}>
-        <img src={burgerImg} alt="menu button" />
+        <img className={classes.burger} src={burgerImg} alt="menu button" />
       </button>
       <FullScreenMenu
         onCloseClick={closeMenu}
