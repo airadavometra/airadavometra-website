@@ -21,7 +21,7 @@ export const PortfolioPage: FunctionComponent = () => {
   const downloadButton = (
     <a
       className={`${classes.download} ${classes.skillsItem}`}
-      href="/resume.pdf"
+      href="/Artemova Daria CV.pdf"
       //download="Artemova Daria front-end developer.pdf"
       target="_blank"
       rel="noopener noreferrer"
