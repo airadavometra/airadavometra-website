@@ -4,7 +4,8 @@ import { ImgInfo } from '../../utils/getPhotos';
 import classes from './GridItemVertical.module.scss';
 
 export interface GridItemVerticalProps {
-  imgPaths: ImgInfo[];
+  verticalImg: ImgInfo;
+  horizontalImgs: ImgInfo[];
   verticalImgPosition: VerticalImgPosition;
   onClick(imgId: number): void;
 }
@@ -15,13 +16,11 @@ export enum VerticalImgPosition {
 }
 
 export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
-  imgPaths,
+  verticalImg,
+  horizontalImgs,
   verticalImgPosition,
   onClick,
 }) => {
-  const verticalImgPath = imgPaths.find((p) => p.isVertical)?.imgPath;
-  const verticalImgId = imgPaths.find((p) => p.isVertical)?.imgId as number;
-  const horizontalImgs = imgPaths.filter((p) => !p.isVertical);
   return (
     <div className={classes.main}>
       <img
@@ -31,8 +30,8 @@ export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
           [classes.verticalImgMiddle]: verticalImgPosition === VerticalImgPosition.Middle,
           [classes.verticalImgRight]: verticalImgPosition === VerticalImgPosition.Right,
         })}
-        src={verticalImgPath}
-        onClick={() => onClick(verticalImgId)}
+        src={verticalImg.imgPath}
+        onClick={() => onClick(verticalImg.imgId)}
       />
       {horizontalImgs.map((item) => (
         <img
