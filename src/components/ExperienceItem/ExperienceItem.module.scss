@@ -1,4 +1,5 @@
-.titleContainerItem {
+.titleContainerItem,
+.titleContainerItemText {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -56,13 +57,21 @@
 
 @media (max-width: 500px) {
   .titleContainerItem {
+    width: 100%;
+  }
+  .titleContainerItem,
+  .titleContainerItemText {
     align-items: flex-start;
+  }
+  .titleContainer {
+    width: 100%;
   }
   .text {
     max-width: 100%;
     padding: 24px 0;
   }
   .title {
+    width: 100%;
     text-align: left;
   }
 }

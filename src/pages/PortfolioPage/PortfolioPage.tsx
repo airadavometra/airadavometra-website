@@ -109,7 +109,7 @@ export const PortfolioPage: FunctionComponent = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <p className={classes.githubText}>Please feel free to check out my github account</p>
+        <p className={classes.githubText}>Please feel free {isMobile && <br />} to check out my github account</p>
         <img className={classes.githubLogo} src={githubImg} alt="github" />
       </a>
     </div>
