@@ -24,13 +24,15 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 76px;
 }
 .menuItem {
   opacity: 50%;
   &:hover {
     opacity: 100%;
   }
+}
+.menuItem:not(:last-child) {
+  margin-right: 76px;
 }
 .isSelected {
   opacity: 100%;
@@ -60,7 +62,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 48px;
   font-size: 24px;
 }
 .close {
@@ -76,6 +77,9 @@
   .logo {
     height: 36px;
   }
+  .menuItem:not(:last-child) {
+    margin-right: 36px;
+  }
 }
 @media (max-width: 500px) {
   .main {
@@ -90,5 +94,9 @@
   }
   .burger {
     display: block;
+  }
+  .fullScreenMenuListItem:not(:last-child) {
+    margin-bottom: 48px;
+    margin-right: 0;
   }
 }

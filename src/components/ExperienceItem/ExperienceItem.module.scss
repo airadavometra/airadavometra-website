@@ -4,9 +4,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 24px;
   color: inherit;
   text-decoration: inherit;
+}
+.titleContainerItemText {
+  margin-right: 24px;
 }
 .linkText {
   font-family: var(--header-text-font);

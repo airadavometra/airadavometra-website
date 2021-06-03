@@ -3,6 +3,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 36px;
+  margin-bottom: 36px;
 }
 .verticalImg {
   max-width: calc((100vw - 4 * 36px) / 3);
@@ -30,6 +31,7 @@
 @media (max-width: 1000px) {
   .main {
     grid-gap: 24px;
+    margin-bottom: 24px;
   }
   .verticalImg {
     max-width: calc((100vw - 4 * 24px) / 3);
@@ -41,14 +43,27 @@
 
 @media (max-width: 500px) {
   .main {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 24px;
+    margin-bottom: 24px;
   }
   .verticalImg {
     max-width: 100%;
   }
   .horizontalImg {
     max-width: 100%;
+  }
+  .verticalImgLeft {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .verticalImgMiddle {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .verticalImgRight {
+    grid-column-start: 1;
+    grid-column-end: 1;
   }
 }

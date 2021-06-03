@@ -2,6 +2,8 @@
 
 .icon {
   height: 64px;
+  margin-bottom: 24px;
+  margin-left: 24px;
 }
 .header {
   padding-bottom: 24px;
@@ -9,12 +11,11 @@
   font-size: 36px;
 }
 .iconsContainer {
-  max-width: 20vw;
+  max-width: 25vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 24px;
 }
 @media (max-width: 1000px) {
   .header {
@@ -22,19 +23,20 @@
   }
   .icon {
     height: 36px;
-  }
-  .iconsContainer {
-    gap: 18px;
+    margin-bottom: 18px;
+    margin-left: 18px;
   }
 }
 
 @media (max-width: 500px) {
   .icon {
     height: 48px;
+    margin-bottom: 18px;
+    margin-right: 18px;
+    margin-left: 0;
   }
   .iconsContainer {
     max-width: 70vw;
     justify-content: flex-start;
-    gap: 18px;
   }
 }

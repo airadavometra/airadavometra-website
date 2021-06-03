@@ -7,15 +7,19 @@ import closeImg from '../../icons/closeMenu.svg';
 import classNames from 'classnames';
 
 interface MenuItemProps {
+  isFullScreen: boolean;
   isSelected(id: string): boolean;
   text: string;
   path: string;
   onClick(id: string): void;
 }
-const MenuItem: FunctionComponent<MenuItemProps> = ({ isSelected, text, path, onClick }) => {
+const MenuItem: FunctionComponent<MenuItemProps> = ({ isFullScreen, isSelected, text, path, onClick }) => {
   return (
     <li
-      className={classNames(classes.menuItem, { [classes.isSelected]: isSelected(path) })}
+      className={classNames(classes.menuItem, {
+        [classes.isSelected]: isSelected(path),
+        [classes.fullScreenMenuListItem]: isFullScreen,
+      })}
       onClick={() => onClick(path)}
     >
       <Link className={classes.link} to={path}>
@@ -26,19 +30,25 @@ const MenuItem: FunctionComponent<MenuItemProps> = ({ isSelected, text, path, on
 };
 
 interface MenuProps {
-  className: string;
+  isFullScreen: boolean;
   isSelected(id: string): boolean;
   onClick(id: string): void;
 }
-const Menu: FunctionComponent<MenuProps> = ({ className, isSelected, onClick }) => {
+const Menu: FunctionComponent<MenuProps> = ({ isFullScreen, isSelected, onClick }) => {
   return (
-    <ul className={className}>
-      <MenuItem isSelected={isSelected} text="About me" path="/" onClick={onClick} />
-      <MenuItem isSelected={isSelected} text="Portfolio" path="/portfolio" onClick={onClick} />
-      <MenuItem isSelected={isSelected} text="Photo" path="/photo" onClick={onClick} />
-      <MenuItem isSelected={isSelected} text="Video" path="/video" onClick={onClick} />
-      {/* <MenuItem isSelected={isSelected} text="Blog" path="/blog" onClick={onClick} /> */}
-      <MenuItem isSelected={isSelected} text="Contact" path="/contact" onClick={onClick} />
+    <ul className={isFullScreen ? classes.fullScreenMenuList : classes.menu}>
+      <MenuItem isFullScreen={isFullScreen} isSelected={isSelected} text="About me" path="/" onClick={onClick} />
+      <MenuItem
+        isFullScreen={isFullScreen}
+        isSelected={isSelected}
+        text="Portfolio"
+        path="/portfolio"
+        onClick={onClick}
+      />
+      <MenuItem isFullScreen={isFullScreen} isSelected={isSelected} text="Photo" path="/photo" onClick={onClick} />
+      <MenuItem isFullScreen={isFullScreen} isSelected={isSelected} text="Video" path="/video" onClick={onClick} />
+      {/* <MenuItem isFullScreen={isFullScreen}  isSelected={isSelected} text="Blog" path="/blog" onClick={onClick} /> */}
+      <MenuItem isFullScreen={isFullScreen} isSelected={isSelected} text="Contact" path="/contact" onClick={onClick} />
     </ul>
   );
 };
@@ -55,7 +65,7 @@ const FullScreenMenu: FunctionComponent<FullScreenMenuProps> = ({ className, isS
       <button className={classes.close} onClick={onCloseClick}>
         <img src={closeImg} alt="close menu button" />
       </button>
-      <Menu className={classes.fullScreenMenuList} isSelected={isSelected} onClick={onClick} />
+      <Menu isFullScreen={true} isSelected={isSelected} onClick={onClick} />
     </div>
   );
 };
@@ -80,7 +90,7 @@ export const Header: FunctionComponent = () => {
   return (
     <header className={classes.main}>
       <img className={classes.logo} src={logoImg} alt="logo" />
-      <Menu className={classes.menu} isSelected={isSelected} onClick={setSelectedItem} />
+      <Menu isFullScreen={false} isSelected={isSelected} onClick={setSelectedItem} />
       <button className={classes.burger} onClick={openMenu}>
         <img className={classes.burger} src={burgerImg} alt="menu button" />
       </button>

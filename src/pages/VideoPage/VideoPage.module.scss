@@ -15,8 +15,7 @@
 
 @media (max-width: 500px) {
   .main {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
   }
 }

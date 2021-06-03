@@ -3,14 +3,19 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 12px;
   color: inherit;
   text-decoration: inherit;
+}
+.linkLogo {
+  height: 24px;
+  width: 24px;
+  margin-right: 12px;
+  fill: var(--black);
   transition: all 0.3s ease-in-out;
-  &:hover,
-  :focus {
-    gap: 24px;
-  }
+}
+a:hover > .linkLogo,
+a:focus > .linkLogo {
+  margin-right: 24px;
 }
 .linkText {
   font-family: var(--header-text-font);
@@ -20,9 +25,4 @@
   .linkText {
     font-size: 18px;
   }
-}
-.linkLogo {
-  height: 24px;
-  width: 24px;
-  fill: var(--black);
 }
