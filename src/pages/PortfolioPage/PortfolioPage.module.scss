@@ -49,7 +49,7 @@
 .githubSection {
   width: fit-content;
   margin: auto;
-  padding-top: 122px;
+  margin-top: 122px;
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
@@ -77,7 +77,7 @@
     margin-bottom: 24px;
   }
   .githubSection {
-    padding-top: 82px;
+    margin-top: 82px;
     grid-template-columns: repeat(1, auto);
     grid-gap: 14px;
   }
@@ -98,7 +98,7 @@
     padding: 24px;
   }
   .githubSection {
-    padding-top: 48px;
+    margin-top: 48px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
