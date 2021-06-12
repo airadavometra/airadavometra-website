@@ -22,6 +22,7 @@ export const PortfolioPage: FunctionComponent = () => {
     <a
       className={`${classes.download} ${classes.skillsItem}`}
       href="/Artemova Daria CV.pdf"
+      // TODO: Убрать коммент, если не нужен
       //download="Artemova Daria front-end developer.pdf"
       target="_blank"
       rel="noopener noreferrer"
@@ -35,6 +36,7 @@ export const PortfolioPage: FunctionComponent = () => {
       <div className={classes.skillsAndExperience}>
         {isMobile && downloadButton}
         <section>
+          {/* TODO: Можно вынести список в отдельный компонент и также данные в массив чтобы по ним мапить */}
           <ul className={classes.experienceList}>
             <li className={classes.experienceItem}>
               <ExperienceItem
@@ -70,6 +72,7 @@ export const PortfolioPage: FunctionComponent = () => {
             </li>
           </ul>
         </section>
+        {/* TODO: Можно вынести список в отдельный компонент */}
         <section className={classes.skills}>
           {!isMobile && downloadButton}
           <SkillItem

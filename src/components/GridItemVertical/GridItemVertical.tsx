@@ -34,6 +34,7 @@ export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
         onClick={() => onClick(verticalImg.imgId)}
       />
       {horizontalImgs.map((item) => (
+        // TODO: Можно вынести картинку в отдельный компонент и использовать его здесь и в GridItemHorizontal
         <img
           onContextMenu={(e) => e.preventDefault()}
           className={classes.horizontalImg}

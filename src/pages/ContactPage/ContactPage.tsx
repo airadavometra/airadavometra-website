@@ -14,9 +14,11 @@ export const ContactPage: FunctionComponent = () => {
   return (
     <div className={classes.main}>
       <div className={classes.mapContainer}>
+        {/* TODO: Для аргументов строк можно писать просто key="en_US". Но сомневаюсь, что тут нужен key в приниципе */}
         <YMaps key={'en_US'} query={{ lang: 'en_US' }}>
           <Map
             className={classes.map}
+            // TODO: вынести все магические числа в константы
             defaultState={{
               center: [55.752068564993, 37.61748330508703],
               zoom: 4,
@@ -39,6 +41,7 @@ export const ContactPage: FunctionComponent = () => {
       </div>
       <div className={classes.contactsContainer}>
         <h2 className={classes.title}>You can reach me here</h2>
+        {/* TODO: вынести контакты в отдельный компонент. Также можно вынести все данные в массив и мапить по ним */}
         <ul className={classes.contacts}>
           <li className={classes.contactItem}>
             <ContactLink

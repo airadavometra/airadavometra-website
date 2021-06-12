@@ -27,6 +27,7 @@ export const App: FunctionComponent = () => {
           <Route exact path="/">
             <MainPage />
           </Route>
+          {/* TODO: Пока можно закомментить Blog */}
           <Route exact path="/blog">
             <BlogPage />
           </Route>
@@ -42,6 +43,7 @@ export const App: FunctionComponent = () => {
           <Route exact path="/video">
             <VideoPage />
           </Route>
+          {/* TODO: Можно бы сделать нормальную страничку для 404 */}
           <Route>404 Page not found</Route>
         </Switch>
       </Layout>

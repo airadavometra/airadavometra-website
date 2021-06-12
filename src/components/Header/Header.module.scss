@@ -69,6 +69,8 @@
   top: 24px;
   right: 24px;
 }
+// TODO: все media можно писать внутри соответстующих селекторов
+// Например .main { @media (max-width: 1000px) { } }
 @media (max-width: 1000px) {
   .main {
     padding: 24px;

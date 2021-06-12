@@ -2,6 +2,7 @@ import { exampleReducer } from './slices/example';
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
+// TODO: Можно удалить всю папку стора
 const reducer = {
   example: exampleReducer,
 };

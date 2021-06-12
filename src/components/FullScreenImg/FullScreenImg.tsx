@@ -13,6 +13,9 @@ export interface FullScreenImgProps {
 }
 
 export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({ img, show, onCloseClick, onMoveClick }) => {
+  {
+    /* TODO: Лучше делать условный рендеринг в родителе компонента и не усложнять компонент */
+  }
   return show ? (
     <div className={classes.main}>
       <div className={classes.closeButton}>

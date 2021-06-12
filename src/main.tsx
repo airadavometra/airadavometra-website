@@ -7,6 +7,7 @@ import { store } from './store';
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* TODO: Store не нужен */}
     <Provider store={store}>
       <App />
     </Provider>

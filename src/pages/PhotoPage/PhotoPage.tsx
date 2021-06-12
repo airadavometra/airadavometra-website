@@ -5,7 +5,10 @@ import { getPhotos } from '../../utils/getPhotos';
 import { GridTemplate } from '../../components/GridTemplate/GridTemplate';
 
 export const PhotoPage: FunctionComponent = () => {
+  // TODO: вынести получение фоток из компонента, так как иначе оно вызывается на каждом рендере
+  // TODO: Вынести 126 в константу
   const photos = getPhotos(window.innerWidth, 126);
+  // TODO: В функции getPhotos можно сразу собирать массивы для горизонтальных и вертикальных фоток и не делать доп фильтры
   const verticalPhotos = photos.filter((item) => item.isVertical);
   const horizontalPhotos = photos.filter((item) => !item.isVertical);
   const [isBigPhotoOpen, setBigPhotoOpen] = useState(false);
@@ -15,6 +18,7 @@ export const PhotoPage: FunctionComponent = () => {
     if (window.innerWidth > 400) {
       setBigPhotoOpen(true);
       setBigImgId(imgId);
+      // TODO: Можно вынести в отдельную функцию util и назвать типа "freezePage"
       document.body.classList.add('frozen');
     }
   };
@@ -33,11 +37,13 @@ export const PhotoPage: FunctionComponent = () => {
     setBigImgId(newImgId);
   };
 
+  // TODO: Убрать лог
   console.log(photos.length);
 
   return (
     <>
       <div className={classes.main}>
+        {/* TODO: Сделать массив нужной длины и мапить по нему, внутри мапа считать длину слайса */}
         <GridTemplate
           verticalImgs={verticalPhotos.slice(0, 3)}
           horizontalImgs={horizontalPhotos.slice(0, 18)}

@@ -5,7 +5,9 @@ export type ImgInfo = {
 };
 
 export const getPhotos = (screenWidth: number, count: number): ImgInfo[] => {
+  // TODO: Убрать лог
   console.log(`getPhotos(${screenWidth}, ${count})`);
+  // TODO: Достаточно получать только 'big' или 'medium'
   const path = screenWidth > 1000 ? '/photos/big/' : '/photos/medium/';
 
   const result = [];
@@ -13,6 +15,7 @@ export const getPhotos = (screenWidth: number, count: number): ImgInfo[] => {
   let horizontalCount = 0;
   let totalCount = 0;
 
+  // TODO: Вынести магические числа в константы
   for (let i = 0; i < count / 21; i++) {
     for (let j = 0; j < 3; j++) {
       result.push({ imgPath: `${path}v/${verticalCount}.jpg`, imgId: totalCount, isVertical: true });

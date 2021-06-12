@@ -6,6 +6,7 @@ import burgerImg from '../../icons/burger.svg';
 import closeImg from '../../icons/closeMenu.svg';
 import classNames from 'classnames';
 
+// TODO: Вынести компоненты для Menu в отдельные файлы
 interface MenuItemProps {
   isFullScreen: boolean;
   isSelected(id: string): boolean;
@@ -65,6 +66,7 @@ const FullScreenMenu: FunctionComponent<FullScreenMenuProps> = ({ className, isS
       <button className={classes.close} onClick={onCloseClick}>
         <img src={closeImg} alt="close menu button" />
       </button>
+      {/* TODO: isFullScreen={true} можно писать просто как isFullScreen */}
       <Menu isFullScreen={true} isSelected={isSelected} onClick={onClick} />
     </div>
   );
@@ -74,6 +76,7 @@ export const Header: FunctionComponent = () => {
   const [selectedItem, setSelectedItem] = useState(window.location.pathname);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
+  // TODO: Переименовать id в path
   const isSelected = (id: string) => selectedItem === id;
 
   const openMenu = () => {
@@ -82,6 +85,7 @@ export const Header: FunctionComponent = () => {
   const closeMenu = () => {
     setMenuOpen(false);
   };
+  // TODO: Переименовать id в path
   const goToPage = (id: string) => {
     setMenuOpen(false);
     setSelectedItem(id);
