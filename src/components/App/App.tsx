@@ -7,6 +7,7 @@ import { ContactPage } from '../../pages/ContactPage/ContactPage';
 import { PortfolioPage } from '../../pages/PortfolioPage/PortfolioPage';
 import { PhotoPage } from '../../pages/PhotoPage/PhotoPage';
 import { VideoPage } from '../../pages/VideoPage/VideoPage';
+import { NotFoundPage } from '../../pages/NotFoundPage/NotFoundPage';
 
 const ScrollToTop: FunctionComponent = () => {
   const { pathname } = useLocation();
@@ -27,9 +28,9 @@ export const App: FunctionComponent = () => {
           <Route exact path="/">
             <MainPage />
           </Route>
-          <Route exact path="/blog">
+          {/* <Route exact path="/blog">
             <BlogPage />
-          </Route>
+          </Route> */}
           <Route exact path="/contact">
             <ContactPage />
           </Route>
@@ -42,7 +43,9 @@ export const App: FunctionComponent = () => {
           <Route exact path="/video">
             <VideoPage />
           </Route>
-          <Route>404 Page not found</Route>
+          <Route>
+            <NotFoundPage />
+          </Route>
         </Switch>
       </Layout>
     </Router>

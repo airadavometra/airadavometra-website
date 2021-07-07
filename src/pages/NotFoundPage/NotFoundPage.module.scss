@@ -1,0 +1,21 @@
+.main {
+  padding: clamp(24px, 2.5vw, 36px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainItem:not(:last-child) {
+  margin-bottom: clamp(24px, 2.5vw, 36px);
+}
+.notFoundImage {
+  width: 30%;
+}
+.notFoundTitle {
+  text-align: center;
+  font-family: var(--header-text-font);
+  font-size: clamp(24px, 2.5vw, 36px);
+}
+.notFoundText {
+  text-align: center;
+  font-size: clamp(18px, 2.5vw, 24px);
+}
