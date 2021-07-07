@@ -4,7 +4,7 @@ import logoImg from '../../images/logo.png';
 import burgerImg from '../../icons/burger.svg';
 import classNames from 'classnames';
 import { Menu } from '../Menu/Menu';
-import { FullScreenMenu } from '../FullScreenMenu/Fullscreenmenu';
+import { FullScreenMenu } from '../FullScreenMenu/FullScreenMenu';
 
 export const Header: FunctionComponent = () => {
   const [selectedItem, setSelectedItem] = useState(window.location.pathname);

@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
 import classes from './ContactPage.module.scss';
 import pinLogo from '../../icons/pin.svg';
-import { ContactList } from '../../components/ContactList/Contactlist';
+import { ContactList } from '../../components/ContactList/ContactList';
 
 export const ContactPage: FunctionComponent = () => {
   const myCoords = [55.752068564993, 37.61748330508703];
