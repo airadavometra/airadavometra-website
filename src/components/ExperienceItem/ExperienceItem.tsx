@@ -17,8 +17,8 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({ text, t
     <>
       <div className={classes.titleContainer}>
         <button className={classes.titleContainerItem} onClick={() => setOpen(!open)}>
-          <h2 className={`${classes.year} ${classes.titleContainerItemText}`}>{year}</h2>
-          <h2 className={`${classes.title} ${classes.titleContainerItemText}`}>{title}</h2>
+          <h2 className={classNames(classes.year, classes.titleContainerItemText)}>{year}</h2>
+          <h2 className={classNames(classes.title, classes.titleContainerItemText)}>{title}</h2>
           <img
             className={classNames(classes.expandBtn, { [classes.collapse]: !open })}
             src={expandImg}

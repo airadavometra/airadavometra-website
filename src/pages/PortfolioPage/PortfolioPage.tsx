@@ -15,12 +15,13 @@ import csharpImg from '../../icons/csharp.svg';
 import dotnetImg from '../../icons/dotnet.svg';
 import githubImg from '../../icons/github.svg';
 import { useMedia } from 'react-use';
+import classNames from 'classnames';
 
 export const PortfolioPage: FunctionComponent = () => {
   const isMobile = useMedia('(max-width: 500px)');
   const downloadButton = (
     <a
-      className={`${classes.download} ${classes.skillsItem}`}
+      className={classNames(classes.download, classes.skillsItem)}
       href="/Artemova Daria CV.pdf"
       //download="Artemova Daria front-end developer.pdf"
       target="_blank"
