@@ -10,7 +10,7 @@ export const Header: FunctionComponent = () => {
   const [selectedItem, setSelectedItem] = useState(window.location.pathname);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-  const isSelected = (id: string) => selectedItem === id;
+  const isSelected = (path: string) => selectedItem === path;
 
   const openMenu = () => {
     setMenuOpen(true);
@@ -18,9 +18,9 @@ export const Header: FunctionComponent = () => {
   const closeMenu = () => {
     setMenuOpen(false);
   };
-  const goToPage = (id: string) => {
+  const goToPage = (path: string) => {
     setMenuOpen(false);
-    setSelectedItem(id);
+    setSelectedItem(path);
   };
 
   return (
