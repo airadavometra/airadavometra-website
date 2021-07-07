@@ -1,0 +1,27 @@
+.menuItem {
+  opacity: 50%;
+  &:hover {
+    opacity: 100%;
+  }
+}
+.menuItem:not(:last-child) {
+  margin-right: 76px;
+  @media (max-width: 1000px) {
+    margin-right: 36px;
+  }
+}
+.link {
+  color: inherit;
+  text-decoration: inherit;
+}
+.isSelected {
+  opacity: 100%;
+}
+.fullScreenMenuListItem {
+  &:not(:last-child) {
+    @media (max-width: 500px) {
+      margin-bottom: 48px;
+      margin-right: 0;
+    }
+  }
+}
