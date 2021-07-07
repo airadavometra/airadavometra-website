@@ -3,11 +3,14 @@ import classes from './PhotoPage.module.scss';
 import { FullScreenImg } from '../../components/FullScreenImg/FullScreenImg';
 import { getPhotos } from '../../utils/getPhotos';
 import { GridTemplate } from '../../components/GridTemplate/GridTemplate';
+import { toggleFreezePage } from '../../utils/toggleFreezePage';
+
+const photosAmount = 126;
+const photos = getPhotos(window.innerWidth, photosAmount);
+const verticalPhotos = photos.filter((item) => item.isVertical);
+const horizontalPhotos = photos.filter((item) => !item.isVertical);
 
 export const PhotoPage: FunctionComponent = () => {
-  const photos = getPhotos(window.innerWidth, 126);
-  const verticalPhotos = photos.filter((item) => item.isVertical);
-  const horizontalPhotos = photos.filter((item) => !item.isVertical);
   const [isBigPhotoOpen, setBigPhotoOpen] = useState(false);
   const [bigImgId, setBigImgId] = useState(0);
 
@@ -15,13 +18,13 @@ export const PhotoPage: FunctionComponent = () => {
     if (window.innerWidth > 400) {
       setBigPhotoOpen(true);
       setBigImgId(imgId);
-      document.body.classList.add('frozen');
+      toggleFreezePage();
     }
   };
   const closePhoto = () => {
     setBigPhotoOpen(false);
     setBigImgId(0);
-    document.body.classList.remove('frozen');
+    toggleFreezePage();
   };
   const changePhoto = (newImgId: number) => {
     if (newImgId == photos.length) {
@@ -32,8 +35,6 @@ export const PhotoPage: FunctionComponent = () => {
     }
     setBigImgId(newImgId);
   };
-
-  console.log(photos.length);
 
   return (
     <>
