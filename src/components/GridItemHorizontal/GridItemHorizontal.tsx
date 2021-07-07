@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { ImgInfo } from '../../utils/getPhotos';
+import { Photo } from '../Photo/Photo';
 import classes from './GridItemHorizontal.module.scss';
 
 export interface GridItemHorizontalProps {
@@ -11,12 +12,12 @@ export const GridItemHorizontal: FunctionComponent<GridItemHorizontalProps> = ({
   return (
     <div className={classes.main}>
       {imgPaths.map((item) => (
-        <img
-          onContextMenu={(e) => e.preventDefault()}
-          className={classes.horizontalImg}
-          key={item.imgId}
+        <Photo
+          classNames={classes.horizontalImg}
           src={item.imgPath}
-          onClick={() => onClick(item.imgId)}
+          key={item.imgId}
+          imgId={item.imgId}
+          onClick={onClick}
         />
       ))}
     </div>
