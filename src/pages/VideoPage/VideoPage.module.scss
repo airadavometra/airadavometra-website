@@ -4,17 +4,12 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 36px;
   background-color: var(--white);
-}
-
-@media (max-width: 1000px) {
-  .main {
+  @media (max-width: 1000px) {
     padding: 24px;
     grid-gap: 24px;
   }
-}
 
-@media (max-width: 500px) {
-  .main {
+  @media (max-width: 500px) {
     grid-template-columns: 1fr;
     grid-gap: 24px;
   }

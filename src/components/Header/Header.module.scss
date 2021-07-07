@@ -12,9 +12,23 @@
   font-family: var(--header-text-font);
   font-size: 24px;
   background-color: var(--yellow);
+  @media (max-width: 1000px) {
+    padding: 24px;
+    font-size: 18px;
+  }
+  @media (max-width: 500px) {
+    padding: 24px;
+    font-size: 14px;
+  }
 }
 .logo {
   height: 48px;
+  @media (max-width: 1000px) {
+    height: 36px;
+  }
+  @media (max-width: 500px) {
+    height: 36px;
+  }
 }
 .link {
   color: inherit;
@@ -24,6 +38,9 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @media (max-width: 500px) {
+    display: none;
+  }
 }
 .menuItem {
   opacity: 50%;
@@ -33,6 +50,9 @@
 }
 .menuItem:not(:last-child) {
   margin-right: 76px;
+  @media (max-width: 1000px) {
+    margin-right: 36px;
+  }
 }
 .isSelected {
   opacity: 100%;
@@ -40,6 +60,9 @@
 .burger {
   height: 36px;
   display: none;
+  @media (max-width: 500px) {
+    display: block;
+  }
 }
 .fullScreenMenu {
   display: none;
@@ -69,34 +92,11 @@
   top: 24px;
   right: 24px;
 }
-@media (max-width: 1000px) {
-  .main {
-    padding: 24px;
-    font-size: 18px;
-  }
-  .logo {
-    height: 36px;
-  }
-  .menuItem:not(:last-child) {
-    margin-right: 36px;
-  }
-}
-@media (max-width: 500px) {
-  .main {
-    padding: 24px;
-    font-size: 14px;
-  }
-  .logo {
-    height: 36px;
-  }
-  .menu {
-    display: none;
-  }
-  .burger {
-    display: block;
-  }
-  .fullScreenMenuListItem:not(:last-child) {
-    margin-bottom: 48px;
-    margin-right: 0;
+.fullScreenMenuListItem {
+  &:not(:last-child) {
+    @media (max-width: 500px) {
+      margin-bottom: 48px;
+      margin-right: 0;
+    }
   }
 }

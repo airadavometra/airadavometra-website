@@ -2,6 +2,12 @@
   max-width: 1600px;
   margin: auto;
   padding: 122px 36px;
+  @media (max-width: 1000px) {
+    padding: 82px 24px;
+  }
+  @media (max-width: 500px) {
+    padding: 24px;
+  }
 }
 .download {
   width: fit-content;
@@ -16,11 +22,26 @@
     color: var(--yellow);
     box-shadow: inset 6.5em 0 0 0 var(--black);
   }
+  @media (max-width: 1000px) {
+    font-size: 24px;
+  }
+  @media (max-width: 500px) {
+    max-width: 50%;
+  }
 }
 .skillsAndExperience {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  & > *:not(:first-child) {
+    @media (max-width: 500px) {
+      margin-bottom: 36px;
+    }
+  }
+  @media (max-width: 500px) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
 }
 .experienceList {
   display: flex;
@@ -31,12 +52,18 @@
   width: 100%;
   &:not(:last-child) {
     margin-bottom: 36px;
+    @media (max-width: 1000px) {
+      margin-bottom: 24px;
+    }
   }
 }
 .skills {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  @media (max-width: 500px) {
+    align-items: flex-start;
+  }
 }
 .skillsItem {
   display: flex;
@@ -44,6 +71,15 @@
   align-items: flex-end;
   &:not(:last-child):not(:first-child) {
     margin-bottom: 12px;
+  }
+  &:not(:last-child) {
+    @media (max-width: 1000px) {
+      margin-bottom: 18px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    align-items: flex-start;
   }
 }
 .githubSection {
@@ -60,64 +96,31 @@
   :focus {
     transform: scale(1.1);
   }
-}
-.githubLogo {
-  height: 32px;
-}
-.githubText {
-  font-family: var(--header-text-font);
-  font-size: 36px;
-}
-@media (max-width: 1000px) {
-  .githubText,
-  .download {
-    font-size: 24px;
-  }
-  .experienceItem:not(:last-child) {
-    margin-bottom: 24px;
-  }
-  .githubSection {
+  @media (max-width: 1000px) {
     margin-top: 82px;
     grid-template-columns: repeat(1, auto);
     grid-gap: 14px;
   }
-  .main {
-    padding: 82px 24px;
-  }
-  .githubLogo {
-    height: 24px;
-  }
-  .skillsItem {
-    &:not(:last-child) {
-      margin-bottom: 18px;
-    }
-  }
-}
-@media (max-width: 500px) {
-  .main {
-    padding: 24px;
-  }
-  .githubSection {
+  @media (max-width: 500px) {
     margin-top: 48px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .skillsAndExperience {
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    & > *:not(:first-child) {
-      margin-bottom: 36px;
-    }
+}
+.githubLogo {
+  height: 32px;
+  @media (max-width: 1000px) {
+    height: 24px;
   }
-  .skillsItem,
-  .skills {
-    align-items: flex-start;
+}
+.githubText {
+  font-family: var(--header-text-font);
+  font-size: 36px;
+  @media (max-width: 1000px) {
+    font-size: 24px;
   }
-  .download {
-    max-width: 50%;
-  }
-  .githubText {
+  @media (max-width: 500px) {
     text-align: center;
   }
 }

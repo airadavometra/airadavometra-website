@@ -12,9 +12,7 @@ body {
   & * {
     box-sizing: border-box;
   }
-}
-@media (max-width: 1000px) {
-  body {
+  @media (max-width: 1000px) {
     font-size: 18px;
   }
 }
