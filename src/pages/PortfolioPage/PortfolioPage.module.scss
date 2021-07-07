@@ -69,15 +69,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  &:not(:last-child):not(:first-child) {
-    margin-bottom: 12px;
-  }
   &:not(:last-child) {
     @media (max-width: 1000px) {
       margin-bottom: 18px;
     }
   }
-
+  &:not(:last-child):not(:first-child) {
+    margin-bottom: 12px;
+  }
   @media (max-width: 500px) {
     align-items: flex-start;
   }
