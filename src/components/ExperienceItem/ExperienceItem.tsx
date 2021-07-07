@@ -22,7 +22,7 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({ text, t
           <img
             className={classNames(classes.expandBtn, { [classes.collapse]: !open })}
             src={expandImg}
-            alt="expand-collapse"
+            alt={open ? 'collapse' : 'expand'}
           />
         </button>
       </div>
