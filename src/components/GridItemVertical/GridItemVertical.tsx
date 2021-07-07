@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { FunctionComponent } from 'react';
 import { ImgInfo } from '../../utils/getPhotos';
-import { Photo } from '../Photo/Photo';
+import { PhotoItem } from '../PhotoItem/PhotoItem';
 import classes from './GridItemVertical.module.scss';
 
 export interface GridItemVerticalProps {
@@ -24,7 +24,7 @@ export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
 }) => {
   return (
     <div className={classes.main}>
-      <Photo
+      <PhotoItem
         classNames={classNames(classes.verticalImg, {
           [classes.verticalImgLeft]: verticalImgPosition === VerticalImgPosition.Left,
           [classes.verticalImgMiddle]: verticalImgPosition === VerticalImgPosition.Middle,
@@ -35,7 +35,7 @@ export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
         onClick={onClick}
       />
       {horizontalImgs.map((item) => (
-        <Photo
+        <PhotoItem
           classNames={classes.horizontalImg}
           src={item.imgPath}
           key={item.imgId}

@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { ImgInfo } from '../../utils/getPhotos';
-import { Photo } from '../Photo/Photo';
+import { PhotoItem } from '../PhotoItem/PhotoItem';
 import classes from './GridItemHorizontal.module.scss';
 
 export interface GridItemHorizontalProps {
@@ -12,7 +12,7 @@ export const GridItemHorizontal: FunctionComponent<GridItemHorizontalProps> = ({
   return (
     <div className={classes.main}>
       {imgPaths.map((item) => (
-        <Photo
+        <PhotoItem
           classNames={classes.horizontalImg}
           src={item.imgPath}
           key={item.imgId}
