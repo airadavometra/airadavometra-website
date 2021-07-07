@@ -7,13 +7,12 @@ import { ImgInfo } from '../../utils/getPhotos';
 
 export interface FullScreenImgProps {
   img: ImgInfo;
-  show: boolean;
   onCloseClick(): void;
   onMoveClick(imgId: number): void;
 }
 
-export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({ img, show, onCloseClick, onMoveClick }) => {
-  return show ? (
+export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({ img, onCloseClick, onMoveClick }) => {
+  return (
     <div className={classes.main}>
       <div className={classes.closeButton}>
         <button className={classes.button} onClick={() => onCloseClick()}>
@@ -30,5 +29,5 @@ export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({ img, show
         </button>
       </div>
     </div>
-  ) : null;
+  );
 };

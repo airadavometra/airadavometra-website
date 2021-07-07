@@ -69,12 +69,9 @@ export const PhotoPage: FunctionComponent = () => {
           onClick={openPhoto}
         />
       </div>
-      <FullScreenImg
-        img={photos[bigImgId]}
-        show={isBigPhotoOpen}
-        onCloseClick={closePhoto}
-        onMoveClick={changePhoto}
-      ></FullScreenImg>
+      {isBigPhotoOpen && (
+        <FullScreenImg img={photos[bigImgId]} onCloseClick={closePhoto} onMoveClick={changePhoto}></FullScreenImg>
+      )}
     </>
   );
 };
