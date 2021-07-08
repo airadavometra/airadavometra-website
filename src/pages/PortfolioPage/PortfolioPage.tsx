@@ -33,7 +33,7 @@ const experienceInfoArray: ExperienceInfo[] = [
   {
     isOpen: false,
     year: '2017',
-    title: 'Became a QA automation engeneer"',
+    title: 'Became a QA automation engeneer',
     text: 'I started my carrier as a QA automation engeneer in CRM system just after my university graduation. I had been studying documentation and code, creating test cases, writing tests and analysing test runs. I had covered the whole code base with autotests for a year. After that I had been helping to create new team of engineers and participated in the improvement of autotesting process and tools.',
   },
   {

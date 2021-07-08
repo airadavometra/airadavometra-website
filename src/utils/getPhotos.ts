@@ -11,13 +11,16 @@ export const getPhotos = (screenWidth: number, count: number): ImgInfo[] => {
   let verticalCount = 0;
   let horizontalCount = 0;
   let totalCount = 0;
+  const verticalAmountInTemplate = 3;
+  const horizontalAmountInTemplate = 18;
+  const totalAmountInTemplate = verticalAmountInTemplate + horizontalAmountInTemplate;
 
-  for (let i = 0; i < count / 21; i++) {
-    for (let j = 0; j < 3; j++) {
+  for (let i = 0; i < count / totalAmountInTemplate; i++) {
+    for (let j = 0; j < verticalAmountInTemplate; j++) {
       result.push({ imgPath: `${path}v/${verticalCount}.jpg`, imgId: totalCount, isVertical: true });
       verticalCount++;
       totalCount++;
-      for (let j = 0; j < 6; j++) {
+      for (let j = 0; j < horizontalAmountInTemplate / verticalAmountInTemplate; j++) {
         result.push({ imgPath: `${path}h/${horizontalCount}.jpg`, imgId: totalCount, isVertical: false });
         horizontalCount++;
         totalCount++;
