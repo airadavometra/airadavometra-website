@@ -6,6 +6,7 @@ import { GridTemplate } from '../../components/GridTemplate/GridTemplate';
 import { toggleFreezePage } from '../../utils/toggleFreezePage';
 
 const photosAmount = 126;
+const photosAmountTemplate = new Array(6).fill('');
 const photos = getPhotos(window.innerWidth, photosAmount);
 const verticalPhotos = photos.filter((item) => item.isVertical);
 const horizontalPhotos = photos.filter((item) => !item.isVertical);
@@ -39,36 +40,14 @@ export const PhotoPage: FunctionComponent = () => {
   return (
     <>
       <div className={classes.main}>
-        <GridTemplate
-          verticalImgs={verticalPhotos.slice(0, 3)}
-          horizontalImgs={horizontalPhotos.slice(0, 18)}
-          onClick={openPhoto}
-        />
-        <GridTemplate
-          verticalImgs={verticalPhotos.slice(3, 6)}
-          horizontalImgs={horizontalPhotos.slice(18, 36)}
-          onClick={openPhoto}
-        />
-        <GridTemplate
-          verticalImgs={verticalPhotos.slice(6, 9)}
-          horizontalImgs={horizontalPhotos.slice(36, 54)}
-          onClick={openPhoto}
-        />
-        <GridTemplate
-          verticalImgs={verticalPhotos.slice(9, 12)}
-          horizontalImgs={horizontalPhotos.slice(54, 72)}
-          onClick={openPhoto}
-        />
-        <GridTemplate
-          verticalImgs={verticalPhotos.slice(12, 15)}
-          horizontalImgs={horizontalPhotos.slice(72, 90)}
-          onClick={openPhoto}
-        />
-        <GridTemplate
-          verticalImgs={verticalPhotos.slice(15, 18)}
-          horizontalImgs={horizontalPhotos.slice(90, 108)}
-          onClick={openPhoto}
-        />
+        {photosAmountTemplate.map((_, index) => (
+          <GridTemplate
+            key={index}
+            verticalImgs={verticalPhotos.slice(index * 3, index * 3 + 3)}
+            horizontalImgs={horizontalPhotos.slice(index * 18, index * 18 + 18)}
+            onClick={openPhoto}
+          />
+        ))}
       </div>
       {isBigPhotoOpen && (
         <FullScreenImg img={photos[bigImgId]} onCloseClick={closePhoto} onMoveClick={changePhoto}></FullScreenImg>

@@ -1,0 +1,14 @@
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.experienceItem {
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 36px;
+    @media (max-width: 1000px) {
+      margin-bottom: 24px;
+    }
+  }
+}

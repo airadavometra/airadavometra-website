@@ -11,7 +11,7 @@ export const VideoPage: FunctionComponent = () => {
       <VideoItem src="https://www.youtube.com/embed/qDYJ6ewVQqY" />
       <VideoItem src="https://www.youtube.com/embed/YeFK_7b9qco" />
       <VideoItem src="https://www.youtube.com/embed/b0M5ElcKh8I" />
-      <VideoItem src="https://www.youtube.com/embed/aWFmEYVXG-A" />
+      {/* <VideoItem src="https://www.youtube.com/embed/aWFmEYVXG-A" /> */}
     </div>
   );
 };

@@ -7,8 +7,8 @@ export interface SkillItemProps {
   className: string;
 }
 export type SkillLogo = {
-  path: string;
-  alt: string;
+  logoPath: string;
+  logoAlt: string;
 };
 
 export const SkillItem: FunctionComponent<SkillItemProps> = ({ skillLogos, skillName, className }) => {
@@ -17,7 +17,7 @@ export const SkillItem: FunctionComponent<SkillItemProps> = ({ skillLogos, skill
       <h2 className={classes.header}>{skillName}</h2>
       <div className={classes.iconsContainer}>
         {skillLogos.map((item, index) => (
-          <img className={classes.icon} key={index} src={item.path} alt={item.alt} />
+          <img className={classes.icon} key={index} src={item.logoPath} alt={item.logoAlt} />
         ))}
       </div>
     </div>
