@@ -1,10 +1,8 @@
 .title {
   margin-bottom: 36px;
+  margin-right: clamp(36px, 5vw, 76px);
   font-family: var(--header-text-font);
-  font-size: 36px;
-  @media (max-width: 1000px) {
-    font-size: 24px;
-  }
+  font-size: clamp(24px, 3vw, 36px);
   @media (max-width: 500px) {
     text-align: center;
   }

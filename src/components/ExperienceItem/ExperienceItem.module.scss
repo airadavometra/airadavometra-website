@@ -25,19 +25,12 @@
 }
 .linkText {
   font-family: var(--header-text-font);
-  font-size: 24px;
-  @media (max-width: 1000px) {
-    font-size: 18px;
-  }
+  font-size: clamp(18px, 2vw, 24px);
 }
 .expandBtn {
-  height: 32px;
-  width: 32px;
+  height: clamp(24px, 2.5vw, 32px);
+  width: clamp(24px, 2.5vw, 32px);
   transition: all 0.5s ease-in-out;
-  @media (max-width: 1000px) {
-    height: 24px;
-    width: 24px;
-  }
 }
 .collapse {
   transform: rotate(180deg);
@@ -45,25 +38,16 @@
 .title,
 .year {
   font-family: var(--header-text-font);
-  font-size: 36px;
-  @media (max-width: 1000px) {
-    font-size: 24px;
-  }
-  @media (max-width: 500px) {
-    text-align: left;
-  }
+  font-size: clamp(24px, 3vw, 36px);
+  text-align: left;
 }
 .year {
   opacity: 50%;
 }
 .text {
   max-width: 55vw;
-  padding-left: 82px;
-  padding-top: 36px;
-  @media (max-width: 1000px) {
-    padding-left: 62px;
-    padding-top: 24px;
-  }
+  padding-left: clamp(62px, 8vw, 82px);
+  padding-top: clamp(24px, 3vw, 36px);
   @media (max-width: 500px) {
     width: 100%;
     max-width: 100%;

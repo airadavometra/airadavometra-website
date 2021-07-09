@@ -1,29 +1,19 @@
 .main {
-  padding-left: 36px;
+  padding-left: clamp(24px, 3vw, 36px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  @media (max-width: 1000px) {
-    padding-left: 24px;
-  }
   @media (max-width: 500px) {
     height: calc(100vh - 84px);
-    padding-left: 24px;
     flex-direction: column;
     justify-content: space-between;
   }
 }
 .description {
-  padding-bottom: 36px;
+  padding-bottom: clamp(24px, 3vw, 36px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media (max-width: 1000px) {
-    padding-bottom: 24px;
-  }
-  @media (max-width: 500px) {
-    padding-bottom: 24px;
-  }
 }
 .lettersImage {
   max-width: 100%;
@@ -41,7 +31,7 @@
 }
 .textHeader {
   font-weight: 700;
-  font-size: 24px;
+  font-size: clamp(14px, 1.5vw, 24px);
   @media (max-width: 500px) {
     padding: 36px 0;
     font-weight: 400;
@@ -51,8 +41,8 @@
 }
 
 .text {
+  font-size: clamp(14px, 1.5vw, 24px);
   @media (max-width: 500px) {
     max-width: 65vw;
-    font-size: 14px;
   }
 }

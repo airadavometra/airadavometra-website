@@ -4,12 +4,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  grid-gap: 36px;
-  margin-bottom: 36px;
-  @media (max-width: 1000px) {
-    grid-gap: 24px;
-    margin-bottom: 24px;
-  }
+  grid-gap: clamp(24px, 3vw, 36px);
+  margin-bottom: clamp(24px, 3vw, 36px);
   @media (max-width: 500px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -20,11 +16,8 @@
 .horizontalImg {
   width: 100%;
   height: 100%;
-  max-width: calc((100vw - 3 * 36px) / 2);
+  max-width: 100%;
   object-fit: cover;
-  @media (max-width: 1000px) {
-    max-width: calc((100vw - 3 * 24px) / 2);
-  }
   @media (max-width: 500px) {
     max-width: 100%;
   }

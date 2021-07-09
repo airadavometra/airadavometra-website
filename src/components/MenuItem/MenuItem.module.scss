@@ -3,11 +3,8 @@
   &:hover {
     opacity: 100%;
   }
-}
-.menuItem:not(:last-child) {
-  margin-right: 76px;
-  @media (max-width: 1000px) {
-    margin-right: 36px;
+  &:not(:last-child) {
+    margin-right: clamp(36px, 5vw, 76px);
   }
 }
 .link {
@@ -19,9 +16,7 @@
 }
 .fullScreenMenuListItem {
   &:not(:last-child) {
-    @media (max-width: 500px) {
-      margin-bottom: 48px;
-      margin-right: 0;
-    }
+    margin-bottom: 48px;
+    margin-right: 0;
   }
 }

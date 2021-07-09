@@ -1,10 +1,7 @@
 .main {
   max-width: 1600px;
   margin: auto;
-  padding: 122px 36px;
-  @media (max-width: 1000px) {
-    padding: 82px 24px;
-  }
+  padding: clamp(82px, 12vw, 122px) clamp(24px, 3vw, 36px);
   @media (max-width: 500px) {
     padding: 24px;
   }
@@ -12,8 +9,8 @@
 .download {
   width: fit-content;
   font-family: var(--header-text-font);
-  font-size: 36px;
-  padding: 14px 20px;
+  font-size: clamp(24px, 3vw, 36px);
+  padding: clamp(12px, 1vw, 14px) clamp(16px, 2vw, 20px);
   margin-bottom: 36px;
   outline: 1px solid var(--black);
   transition: all 0.5s ease-in-out;
@@ -21,9 +18,6 @@
   :focus {
     color: var(--yellow);
     box-shadow: inset 6.5em 0 0 0 var(--black);
-  }
-  @media (max-width: 1000px) {
-    font-size: 24px;
   }
   @media (max-width: 500px) {
     max-width: 50%;
@@ -54,21 +48,19 @@
 .githubSection {
   width: fit-content;
   margin: auto;
-  margin-top: 122px;
+  margin-top: clamp(82px, 12vw, 122px);
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
   justify-items: center;
-  grid-gap: 24px;
+  grid-gap: clamp(14px, 2vw, 24px);
   transition: all 0.3s ease-in-out;
   &:hover,
   :focus {
     transform: scale(1.1);
   }
   @media (max-width: 1000px) {
-    margin-top: 82px;
     grid-template-columns: repeat(1, auto);
-    grid-gap: 14px;
   }
   @media (max-width: 500px) {
     margin-top: 48px;
@@ -78,17 +70,11 @@
   }
 }
 .githubLogo {
-  height: 32px;
-  @media (max-width: 1000px) {
-    height: 24px;
-  }
+  height: clamp(24px, 3vw, 32px);
 }
 .githubText {
   font-family: var(--header-text-font);
-  font-size: 36px;
-  @media (max-width: 1000px) {
-    font-size: 24px;
-  }
+  font-size: clamp(24px, 3vw, 36px);
   @media (max-width: 500px) {
     text-align: center;
   }

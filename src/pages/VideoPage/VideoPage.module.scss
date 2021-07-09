@@ -1,16 +1,10 @@
 .main {
-  padding: 36px;
+  padding: clamp(24px, 3vw, 36px);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 36px;
+  grid-gap: clamp(24px, 3vw, 36px);
   background-color: var(--white);
-  @media (max-width: 1000px) {
-    padding: 24px;
-    grid-gap: 24px;
-  }
-
   @media (max-width: 500px) {
     grid-template-columns: 1fr;
-    grid-gap: 24px;
   }
 }

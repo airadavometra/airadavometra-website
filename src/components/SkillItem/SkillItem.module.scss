@@ -1,14 +1,9 @@
 @import url('../../style/theme.scss');
 
 .icon {
-  height: 64px;
-  margin-bottom: 24px;
-  margin-left: 24px;
-  @media (max-width: 1000px) {
-    height: 36px;
-    margin-bottom: 18px;
-    margin-left: 18px;
-  }
+  height: clamp(36px, 5vw, 64px);
+  margin-bottom: clamp(18px, 2vw, 24px);
+  margin-left: clamp(18px, 2vw, 24px);
   @media (max-width: 500px) {
     height: 48px;
     margin-bottom: 18px;
@@ -19,10 +14,7 @@
 .header {
   padding-bottom: 24px;
   font-family: var(--header-text-font);
-  font-size: 36px;
-  @media (max-width: 1000px) {
-    font-size: 24px;
-  }
+  font-size: clamp(24px, 3vw, 36px);
 }
 .iconsContainer {
   max-width: 25vw;
