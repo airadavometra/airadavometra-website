@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { Menu } from '../Menu/Menu';
-import classes from './Fullscreenmenu.module.scss';
+import classes from './FullScreenMenu.module.scss';
 import closeImg from '../../icons/closeMenu.svg';
 
 export interface FullScreenMenuProps {
