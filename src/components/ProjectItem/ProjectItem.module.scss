@@ -1,13 +1,3 @@
-.main {
-  position: relative;
-  &:hover > .overlay {
-    opacity: 100%;
-  }
-  overflow: hidden;
-}
-.projectPreviewImg {
-  width: 100%;
-}
 .overlay {
   width: 100%;
   height: 100%;
@@ -17,10 +7,20 @@
   flex-direction: row;
   opacity: 0%;
   color: var(--yellow);
-  background-color: #333333ee;
+  background-color: #333e;
   @media (max-width: 500px) {
     opacity: 100%;
   }
+}
+.main {
+  position: relative;
+  overflow: hidden;
+  &:hover > .overlay {
+    opacity: 100%;
+  }
+}
+.projectPreviewImg {
+  width: 100%;
 }
 .text {
   width: calc(100% - clamp(48px, 20vw, 250px) / 2);
