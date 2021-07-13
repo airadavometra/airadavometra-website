@@ -25,10 +25,20 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({ projectInfo }
           <div className={classes.title}>{projectInfo.projectName}</div>
           <div className={classes.description}>{projectInfo.projectDesc}</div>
         </section>
-        <a className={classNames(classes.link, classes.projectLink)} href={projectInfo.projectLink}>
+        <a
+          className={classNames(classes.link, classes.projectLink)}
+          href={projectInfo.projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img className={classNames(classes.icon, classes.projectIcon)} src={linkImg} alt="App link" />
         </a>
-        <a className={classNames(classes.link, classes.projectGithubLink)} href={projectInfo.projectGithubLink}>
+        <a
+          className={classNames(classes.link, classes.projectGithubLink)}
+          href={projectInfo.projectGithubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             className={classNames(classes.icon, classes.projectGithubIcon)}
             src={githubLinkImg}
