@@ -16,6 +16,9 @@ import { useMedia } from 'react-use';
 import classNames from 'classnames';
 import { SkillInfo, SkillList } from '../../components/SkillList/SkillList';
 import { ExperienceInfo, ExperienceList } from '../../components/ExperienceList/ExperienceList';
+import { ProjectList } from '../../components/ProjectList/ProjectList';
+import { ProjectInfo } from '../../components/ProjectItem/ProjectItem';
+import watchList from '/projects/watchlist.jpg';
 
 const experienceInfoArray: ExperienceInfo[] = [
   {
@@ -71,6 +74,16 @@ const skillInfoArray: SkillInfo[] = [
     ],
   },
 ];
+const projectInfoArray: ProjectInfo[] = [
+  {
+    projectName: 'Watch List',
+    projectDesc:
+      'This is a pet project to save all the interesting upcoming premieres and already released content in a local storage of your browser (for now). And every time you face a problem like you dont know what to watch, this app can help you.',
+    projectPic: watchList,
+    projectLink: 'https://watch-list.vercel.app/',
+    projectGithubLink: 'https://github.com/airadavometra/watch-list',
+  },
+];
 
 export const PortfolioPage: FunctionComponent = () => {
   const isMobile = useMedia('(max-width: 500px)');
@@ -97,6 +110,7 @@ export const PortfolioPage: FunctionComponent = () => {
           <SkillList skillInfoArray={skillInfoArray} />
         </section>
       </div>
+      <ProjectList projectInfoArray={projectInfoArray} />
       <a
         className={classes.githubSection}
         href="https://github.com/airadavometra"
