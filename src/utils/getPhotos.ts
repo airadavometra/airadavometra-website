@@ -5,7 +5,7 @@ export type ImgInfo = {
 };
 
 export const getPhotos = (screenWidth: number, count: number): ImgInfo[] => {
-  const path = screenWidth > 1000 ? '/photos/big/' : '/photos/medium/';
+  const path = '/photos/medium/';
 
   const result = [];
   let verticalCount = 0;

@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import classes from './MainPage.module.scss';
 import lettersImg from '../../images/letters.png';
-import myPhoto from '../../images/my_photo.png';
+import myPhoto from '../../images/my_photo.webp';
 
 export const MainPage: FunctionComponent = () => {
   return (
