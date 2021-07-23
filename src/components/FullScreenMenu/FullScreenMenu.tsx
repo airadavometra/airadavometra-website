@@ -18,7 +18,7 @@ export const FullScreenMenu: FunctionComponent<FullScreenMenuProps> = ({
   return (
     <div className={className}>
       <button className={classes.close} onClick={onCloseClick}>
-        <img src={closeImg} alt="close menu button" />
+        <img className={classes.closeIcon} src={closeImg} alt="close menu button" />
       </button>
       <Menu isFullScreen isSelected={isSelected} onClick={onClick} />
     </div>
