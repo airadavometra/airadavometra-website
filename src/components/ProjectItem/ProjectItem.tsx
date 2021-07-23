@@ -19,7 +19,7 @@ export type ProjectInfo = {
 export const ProjectItem: FunctionComponent<ProjectItemProps> = ({ projectInfo }) => {
   return (
     <div className={classes.main}>
-      <img className={classes.projectPreviewImg} src={projectInfo.projectPic} />
+      <img className={classes.projectPreviewImg} src={projectInfo.projectPic} alt={projectInfo.projectName} />
       <div className={classes.overlay}>
         <section className={classes.text}>
           <div className={classes.title}>{projectInfo.projectName}</div>
