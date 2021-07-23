@@ -12,7 +12,8 @@
   background-color: var(--black-transparent);
 }
 .button {
-  max-height: 36px;
+  width: 24px;
+  height: 36px;
 }
 .photo {
   max-height: calc(100vh - 72px - 72px);
