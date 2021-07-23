@@ -9,6 +9,12 @@ export interface PhotoItemProps {
 
 export const PhotoItem: FunctionComponent<PhotoItemProps> = ({ classNames, src, imgId, onClick }) => {
   return (
-    <img onContextMenu={(e) => e.preventDefault()} className={classNames} src={src} onClick={() => onClick(imgId)} />
+    <img
+      onContextMenu={(e) => e.preventDefault()}
+      className={classNames}
+      src={src}
+      onClick={() => onClick(imgId)}
+      alt="photo"
+    />
   );
 };
