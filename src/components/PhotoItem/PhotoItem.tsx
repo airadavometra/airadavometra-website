@@ -15,6 +15,7 @@ export const PhotoItem: FunctionComponent<PhotoItemProps> = ({ classNames, src, 
       src={src}
       onClick={() => onClick(imgId)}
       alt="photo"
+      loading="lazy"
     />
   );
 };
