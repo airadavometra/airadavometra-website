@@ -19,6 +19,7 @@ import { ExperienceInfo, ExperienceList } from '../../components/ExperienceList/
 import { ProjectList } from '../../components/ProjectList/ProjectList';
 import { ProjectInfo } from '../../components/ProjectItem/ProjectItem';
 import watchList from '/projects/watchlist.jpg';
+import typesCoersion from '/projects/typesCoersion.jpg';
 
 const experienceInfoArray: ExperienceInfo[] = [
   {
@@ -86,6 +87,14 @@ const projectInfoArray: ProjectInfo[] = [
     projectPic: watchList,
     projectLink: 'https://watch-list.vercel.app/',
     projectGithubLink: 'https://github.com/airadavometra/watch-list',
+  },
+  {
+    projectName: 'JS Type Coersion Game',
+    projectDesc:
+      'Game to practice JS types coersion rules with absolutely random levels and neon design. You gonna love it!',
+    projectPic: typesCoersion,
+    projectLink: 'https://8-out-of-10-cats-does-types-coersion.vercel.app/',
+    projectGithubLink: 'https://github.com/airadavometra/8-out-of-10-cats-does-types-coersion',
   },
 ];
 
