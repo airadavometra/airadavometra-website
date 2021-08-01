@@ -25,7 +25,7 @@ export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
   return (
     <div className={classes.main}>
       <PhotoItem
-        classNames={classNames(classes.verticalImg, {
+        cssClassNames={classNames(classes.verticalImg, {
           [classes.verticalImgLeft]: verticalImgPosition === VerticalImgPosition.Left,
           [classes.verticalImgMiddle]: verticalImgPosition === VerticalImgPosition.Middle,
           [classes.verticalImgRight]: verticalImgPosition === VerticalImgPosition.Right,
@@ -36,7 +36,7 @@ export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
       />
       {horizontalImgs.map((item) => (
         <PhotoItem
-          classNames={classes.horizontalImg}
+          cssClassNames={classes.horizontalImg}
           src={item.imgPath}
           key={item.imgId}
           imgId={item.imgId}

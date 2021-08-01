@@ -1,17 +1,19 @@
 import React, { FunctionComponent } from 'react';
+import classes from './PhotoItem.module.scss';
+import classNames from 'classnames';
 
 export interface PhotoItemProps {
-  classNames: string;
+  cssClassNames: string;
   src: string;
   imgId: number;
   onClick(imgId: number): void;
 }
 
-export const PhotoItem: FunctionComponent<PhotoItemProps> = ({ classNames, src, imgId, onClick }) => {
+export const PhotoItem: FunctionComponent<PhotoItemProps> = ({ cssClassNames, src, imgId, onClick }) => {
   return (
     <img
+      className={classNames(cssClassNames, classes.photoItem)}
       onContextMenu={(e) => e.preventDefault()}
-      className={classNames}
       src={src}
       onClick={() => onClick(imgId)}
       alt="photo"

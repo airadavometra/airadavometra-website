@@ -13,7 +13,7 @@ export const GridItemHorizontal: FunctionComponent<GridItemHorizontalProps> = ({
     <div className={classes.main}>
       {imgPaths.map((item) => (
         <PhotoItem
-          classNames={classes.horizontalImg}
+          cssClassNames={classes.horizontalImg}
           src={item.imgPath}
           key={item.imgId}
           imgId={item.imgId}
