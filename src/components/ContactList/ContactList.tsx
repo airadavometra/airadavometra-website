@@ -16,7 +16,7 @@ export const ContactList: FunctionComponent = () => {
         <li className={classes.contactItem}>
           <ContactLink
             linkLogoPath={linkedinLogo}
-            link="https://www.linkedin.com/in/daria-artemova-a13003188/"
+            link="https://www.linkedin.com/in/airadavometra/"
             linkText="LinkedIn"
           />
         </li>
